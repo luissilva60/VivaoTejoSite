@@ -125,7 +125,9 @@
             <div class="u-container-layout u-similar-container u-container-layout-1">
               <!--blog_post_header-->
               <h2 class="u-blog-control u-custom-item u-text u-text-1">
-                <a class="u-post-header-link" href="blog/post-5.html">Notícia 1</a>
+              <element onloadstart="getArtigos">
+                <a class="u-post-header-link"  href="blog/post-5.html">Notícia 1</a>
+              </element>
               </h2>
               <!--/blog_post_header-->
               <a class="u-post-header-link" href="blog/post-5.html">
@@ -250,6 +252,21 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
       <span>HTML Creator</span>
     </a>.
   </section>
+  <script>
+      function getArtigos() {
+
+  $.ajax({
+      url: "https://vivaotejo.herokuapp.com/api/artigos",
+      type: "GET",
+      dataType: 'json',
+      success: function(result) {
+          console.log(result);
+      }
+  });
+  }
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="nodeJS/js/artigos.js"></script>
 </body>
 
 </html>
