@@ -37,7 +37,7 @@
   <meta property="og:type" content="website">
 </head>
 
-<body class="u-body u-xl-mode">
+<body onload="getArtigos" class="u-body u-xl-mode">
   <header class="u-clearfix u-header u-header" id="sec-3be9">
     <div class="u-clearfix u-sheet u-sheet-1">
       <a href="index.html" class="u-image u-logo u-image-1 noHover  " data-image-width="300" data-image-height="300">
@@ -252,6 +252,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
       <span>HTML Creator</span>
     </a>.
   </section>
+  <pre id ="artigo"></pre>
   <script>
       function getArtigos() {
 
@@ -260,10 +261,12 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
       type: "GET",
       dataType: 'json',
       success: function(result) {
-          console.log(result);
+          console.log(result)
       }
   });
   }
+
+  document.getElementById("artigo").innerHTML = JSON.stringify(getArtigos);
 </script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="nodeJS/js/artigos.js"></script>
