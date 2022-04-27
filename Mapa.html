@@ -10,6 +10,12 @@
   <title>Mapa</title>
   <link rel="stylesheet" href="nicepage.css" media="screen">
   <link rel="stylesheet" href="Mapa.css" media="screen">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script type="module" src="index.js"></script>
+
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
   <meta name="generator" content="Nicepage 4.9.5, nicepage.com">
@@ -117,17 +123,22 @@
       <h1 class="u-text u-text-default u-text-1">Mapa Interativo</h1>
     </div>
   </section>
-  <section class="u-clearfix u-section-2" id="sec-d24f">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-grey-light-2 u-map u-map-1">
-        <div class="embed-responsive">
-          <iframe class="embed-responsive-item"
-            src="//maps.google.com/maps?output=embed&amp;q=Manhattan%2C%20New%20York&amp;z=10&amp;t=m"
-            data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyQyUyME5ldyUyMFlvcmslMjIlMkMlMjJ6b29tJTIyJTNBMTAlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdHayjIj-mkhE1hp_I3OKGVd65t-JRI8E&callback=initMap&v=weekly"
+      defer
+    ></script>
 
 
   <footer class="u-align-center u-clearfix u-footer u-grey-80" id="sec-e0ac">
