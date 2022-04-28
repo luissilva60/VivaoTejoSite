@@ -6,29 +6,5 @@
   font-weight: 900;
   margin: 25px auto;
 }.u-section-2 .u-sheet-1 {
-  min-height: 502px;
-}
-
-.u-section-2 .u-map-1 {
-  width: 829px;
-  height: 361px;
-  margin: 71px auto;
-}
-
-@media (max-width: 991px) {
-  .u-section-2 .u-map-1 {
-    width: 720px;
-  }
-}
-
-@media (max-width: 767px) {
-  .u-section-2 .u-map-1 {
-    width: 540px;
-  }
-}
-
-@media (max-width: 575px) {
-  .u-section-2 .u-map-1 {
-    width: 340px;
-  }
-}
+   min-height: 502px;
+ }
