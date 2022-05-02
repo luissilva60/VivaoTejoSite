@@ -12,6 +12,17 @@
   <link rel="stylesheet" href="Notícias.css" media="screen">
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <script src="./nodeJS/js/artigos.js"></script>
+  <script src="./nodeJS/js/artigosTotal.js">
+
+    function showArtigo(id) {
+    console.log("setItem->artigos_title = " + id);
+    sessionStorage.setItem("artigos_id", id);
+    window.location = "noticiasBody.html";
+
+}
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <meta name="generator" content="Nicepage 4.9.5, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -125,10 +136,10 @@
             <div class="u-container-layout u-similar-container u-container-layout-1">
               <!--blog_post_header-->
               <h2 class="u-blog-control u-custom-item u-text u-text-1">
-              <element onloadstart="getArtigos">
-                <a class="u-post-header-link"  href="blog/post-5.html">Notícia 1</a>
-              </element>
+              <form onload="">
+                <a class="u-post-header-link" href="noticiasBody.html">Id: <span id ="artigos_title"></span></a>
               </h2>
+              </form>
               <!--/blog_post_header-->
               <a class="u-post-header-link" href="blog/post-5.html">
                 <!--blog_post_image-->
@@ -252,24 +263,9 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
       <span>HTML Creator</span>
     </a>.
   </section>
-  <pre id ="artigo"></pre>
-  <script>
-      function getArtigos() {
-
-  $.ajax({
-      url: "https://vivaotejo.herokuapp.com/api/artigos",
-      type: "GET",
-      dataType: 'json',
-      success: function(result) {
-          console.log(result)
-      }
-  });
-  }
-
-  document.getElementById("artigo").innerHTML = JSON.stringify(getArtigos);
-</script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="nodeJS/js/artigos.js"></script>
+<script src="./nodeJS/js/artigos.js"></script>
 </body>
 
 </html>
