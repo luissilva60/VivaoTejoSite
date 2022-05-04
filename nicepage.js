@@ -1,3 +1,10 @@
+/*let form = document.querySelecter('form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  return false;
+});*/
+
 !(function (t) {
   function e(n) {
     if (i[n]) return i[n].exports;
@@ -20,11 +27,11 @@
       var i =
         t && t.__esModule
           ? function e() {
-              return t["default"];
-            }
+            return t["default"];
+          }
           : function e() {
-              return t;
-            };
+            return t;
+          };
       return e.d(i, "a", i), i;
     }),
     (e.o = function (t, e) {
@@ -195,14 +202,14 @@
           i = this.countdownCommon.getAfterCount();
         if (
           ((t = t || ""),
-          "none" !== i && "down" === e && CountdownCommon.isEmptyDiff(diff))
+            "none" !== i && "down" === e && CountdownCommon.isEmptyDiff(diff))
         ) {
           if ("message" === i) this.showMessage();
           if ("redirect" === i)
             if (
               (this.$dom.find(".u-countdown-message").text("Redirecting..."),
-              this.showMessage(),
-              "preview" !== t)
+                this.showMessage(),
+                "preview" !== t)
             ) {
               var n = this.countdownCommon.getRedirectUrl();
               window.location.href = n;
@@ -273,12 +280,12 @@
           o = e.toString(),
           a = o.length;
         if ("to-number" === this.getType()) {
-          for (; n.find(".u-countdown-number").length < a + 1; ) {
+          for (; n.find(".u-countdown-number").length < a + 1;) {
             var itemDom = n.find(".u-countdown-number:eq(0)");
             if (!itemDom.length) break;
             itemDom.clone().insertAfter(itemDom).text("0");
           }
-          for (; n.find(".u-countdown-number").length > a + 1; )
+          for (; n.find(".u-countdown-number").length > a + 1;)
             n.find(".u-countdown-number:eq(0)").remove();
         }
         var s = n.find(".u-countdown-number");
@@ -288,13 +295,13 @@
           "seconds" === t ||
           "numbers" === t
         )
-          for (; o.length < s.length; ) o = "0" + o;
+          for (; o.length < s.length;) o = "0" + o;
         if (!(a > s.length))
           for (var l = 0; l < s.length; l++) {
             var u = $(s[l]);
             if (
               (this.doSetVal(u, o[l], props),
-              i && ("years" === t || "days" === t))
+                i && ("years" === t || "days" === t))
             )
               u.toggleClass("u-hidden", l >= a);
           }
@@ -449,24 +456,24 @@
     function n(t, section) {
       if (
         ((this.element = t),
-        (this.section = section),
-        (this.name = t.getAttribute("data-animation-name")),
-        (this.event = "scroll"),
-        (this.durationRaw = t.getAttribute("data-animation-duration")),
-        (this.duration = Number(this.durationRaw)),
-        isNaN(this.duration) || !isFinite(this.duration) || this.duration < 0)
+          (this.section = section),
+          (this.name = t.getAttribute("data-animation-name")),
+          (this.event = "scroll"),
+          (this.durationRaw = t.getAttribute("data-animation-duration")),
+          (this.duration = Number(this.durationRaw)),
+          isNaN(this.duration) || !isFinite(this.duration) || this.duration < 0)
       )
         this.duration = 0;
       var e = t.getAttribute("data-animation-event");
       if (e) this.event = e;
       if (
         ((this.delayRaw = t.getAttribute("data-animation-delay")),
-        (this.delay = 0),
-        this.delayRaw)
+          (this.delay = 0),
+          this.delayRaw)
       )
         if (
           ((this.delay = Number(this.delayRaw)),
-          isNaN(this.delay) || !isFinite(this.delay) || this.delay < 0)
+            isNaN(this.delay) || !isFinite(this.delay) || this.delay < 0)
         )
           this.delay = 0;
       var i = t.getAttribute("data-animation-cycle");
@@ -485,8 +492,8 @@
     function CountdownAnimate(t) {
       if (
         ((this.$dom = t),
-        (this.$html = this.$dom.find(".counter-animation")),
-        !this.$html.length)
+          (this.$html = this.$dom.find(".counter-animation")),
+          !this.$html.length)
       ) {
         var e = this.$dom.text();
         (this.$html = $(
@@ -640,13 +647,13 @@
           if (i.length) {
             if (
               ((this.controls = i),
-              (this.data = {
-                offset: 0,
-                width: 0,
-                scrollWidth: 0,
-                maxOffset: 0,
-              }),
-              t)
+                (this.data = {
+                  offset: 0,
+                  width: 0,
+                  scrollWidth: 0,
+                  maxOffset: 0,
+                }),
+                t)
             )
               (this._onScroll = this.onScroll.bind(this)),
                 (this._onlazyloaded = this.onlazyloaded.bind(this)),
@@ -711,7 +718,7 @@
           if (t.hasClass("u-gallery-nav-next")) {
             if (
               ((e = a(e + i) - 1),
-              this.data.scrollWidth - (e + this.data.width) < n)
+                this.data.scrollWidth - (e + this.data.width) < n)
             )
               e = this.data.maxOffset + n;
           } else if (e > 0)
@@ -764,7 +771,7 @@
             n = 0,
             o = "";
           if (null == t) return e;
-          for (; t.length; ) {
+          for (; t.length;) {
             var a = i.exec(t);
             if (!a) break;
             var s,
@@ -815,11 +822,11 @@
               "clip",
             ];
             var size =
-                (props = Array.isArray(props) ? props : [props]).includes(
-                  "size"
-                ) && this.size
-                  ? " / " + this.size
-                  : "",
+              (props = Array.isArray(props) ? props : [props]).includes(
+                "size"
+              ) && this.size
+                ? " / " + this.size
+                : "",
               list = [
                 props.includes("image") ? this.image : "",
                 props.includes("repeat") ? this.repeat : "",
@@ -842,16 +849,16 @@
             if (null == t) return list;
             for (
               var n = i(t.backgroundImage),
-                a = t.backgroundColor,
-                s = o(t.backgroundAttachment),
-                l = o(t.backgroundClip),
-                u = o(t.backgroundOrigin),
-                c = o(t.backgroundPosition),
-                f = o(t.backgroundRepeat),
-                h = o(t.backgroundSize),
-                background,
-                p = 0,
-                m = n.length;
+              a = t.backgroundColor,
+              s = o(t.backgroundAttachment),
+              l = o(t.backgroundClip),
+              u = o(t.backgroundOrigin),
+              c = o(t.backgroundPosition),
+              f = o(t.backgroundRepeat),
+              h = o(t.backgroundSize),
+              background,
+              p = 0,
+              m = n.length;
               p < m;
               p++
             ) {
@@ -865,7 +872,7 @@
                   repeat: f[p % f.length],
                   size: h[p % h.length],
                 })),
-                p === m - 1)
+                  p === m - 1)
               )
                 background.color = a;
               list.backgrounds.push(background);
@@ -943,8 +950,8 @@
           if ((this.countUp.reset(), this._timeoutId))
             clearTimeout(this._timeoutId);
           var e = function () {
-              (this._timeoutId = null), this.countUp.start();
-            }.bind(this),
+            (this._timeoutId = null), this.countUp.start();
+          }.bind(this),
             i = this.info.delay;
           if (isNaN(i)) i = 0;
           if (!i) return e(), void 0;
@@ -1035,9 +1042,9 @@
             var e, i, n, o, a, s;
             if (
               ((t = t.toFixed(c.decimals)),
-              (i = (e = (t += "").split("."))[0]),
-              (n = e.length > 1 ? c.options.decimal + e[1] : ""),
-              c.options.useGrouping)
+                (i = (e = (t += "").split("."))[0]),
+                (n = e.length > 1 ? c.options.decimal + e[1] : ""),
+                c.options.useGrouping)
             ) {
               for (o = "", a = 0, s = i.length; a < s; ++a) {
                 if (0 !== a && a % 3 == 0) o = c.options.separator + o;
@@ -1065,18 +1072,18 @@
             ((c.version = function () {
               return "1.9.2";
             }),
-            (c.options = {
-              useEasing: true,
-              useGrouping: true,
-              separator: ",",
-              decimal: ".",
-              easingFn: l,
-              formattingFn: s,
-              prefix: "",
-              suffix: "",
-              numerals: [],
-            }),
-            a && "object" == typeof a)
+              (c.options = {
+                useEasing: true,
+                useGrouping: true,
+                separator: ",",
+                decimal: ".",
+                easingFn: l,
+                formattingFn: s,
+                prefix: "",
+                suffix: "",
+                numerals: [],
+              }),
+              a && "object" == typeof a)
           )
             for (var f in c.options)
               if (a.hasOwnProperty(f) && null !== a[f]) c.options[f] = a[f];
@@ -1110,16 +1117,16 @@
               if (c.initialized) return true;
               if (
                 ((c.error = ""),
-                (c.d = "string" == typeof t ? document.getElementById(t) : t),
-                !c.d)
+                  (c.d = "string" == typeof t ? document.getElementById(t) : t),
+                  !c.d)
               )
                 return (
                   (c.error = "[CountUp] target is null or undefined"), false
                 );
               if (
                 ((c.startVal = Number(e)),
-                (c.endVal = Number(i)),
-                u(c.startVal) && u(c.endVal))
+                  (c.endVal = Number(i)),
+                  u(c.startVal) && u(c.endVal))
               )
                 return (
                   (c.decimals = Math.max(0, n || 0)),
@@ -1141,87 +1148,87 @@
                   false
                 );
             }),
-            (c.printValue = function (t) {
-              var e = c.options.formattingFn(t);
-              if ("INPUT" === c.d.tagName) this.d.value = e;
-              else if ("text" === c.d.tagName || "tspan" === c.d.tagName)
-                this.d.textContent = e;
-              else this.d.innerHTML = e;
-            }),
-            (c.count = function (t) {
-              if (!c.startTime) c.startTime = t;
-              c.timestamp = t;
-              var e = t - c.startTime;
-              if (((c.remaining = c.duration - e), c.options.useEasing))
-                if (c.countDown)
+              (c.printValue = function (t) {
+                var e = c.options.formattingFn(t);
+                if ("INPUT" === c.d.tagName) this.d.value = e;
+                else if ("text" === c.d.tagName || "tspan" === c.d.tagName)
+                  this.d.textContent = e;
+                else this.d.innerHTML = e;
+              }),
+              (c.count = function (t) {
+                if (!c.startTime) c.startTime = t;
+                c.timestamp = t;
+                var e = t - c.startTime;
+                if (((c.remaining = c.duration - e), c.options.useEasing))
+                  if (c.countDown)
+                    c.frameVal =
+                      c.startVal -
+                      c.options.easingFn(e, 0, c.startVal - c.endVal, c.duration);
+                  else
+                    c.frameVal = c.options.easingFn(
+                      e,
+                      c.startVal,
+                      c.endVal - c.startVal,
+                      c.duration
+                    );
+                else if (c.countDown)
                   c.frameVal =
-                    c.startVal -
-                    c.options.easingFn(e, 0, c.startVal - c.endVal, c.duration);
+                    c.startVal - (c.startVal - c.endVal) * (e / c.duration);
                 else
-                  c.frameVal = c.options.easingFn(
-                    e,
-                    c.startVal,
-                    c.endVal - c.startVal,
-                    c.duration
-                  );
-              else if (c.countDown)
-                c.frameVal =
-                  c.startVal - (c.startVal - c.endVal) * (e / c.duration);
-              else
-                c.frameVal =
-                  c.startVal + (c.endVal - c.startVal) * (e / c.duration);
-              if (c.countDown)
-                c.frameVal = c.frameVal < c.endVal ? c.endVal : c.frameVal;
-              else c.frameVal = c.frameVal > c.endVal ? c.endVal : c.frameVal;
-              if (
-                ((c.frameVal = Math.round(c.frameVal * c.dec) / c.dec),
-                c.printValue(c.frameVal),
-                e < c.duration)
-              )
-                c.rAF = requestAnimationFrame(c.count);
-              else if (c.callback) c.callback();
-            }),
-            (c.start = function (t) {
-              if (c.initialize())
-                (c.callback = t), (c.rAF = requestAnimationFrame(c.count));
-            }),
-            (c.pauseResume = function () {
-              if (!c.paused) (c.paused = true), cancelAnimationFrame(c.rAF);
-              else
-                (c.paused = false),
-                  delete c.startTime,
-                  (c.duration = c.remaining),
-                  (c.startVal = c.frameVal),
-                  requestAnimationFrame(c.count);
-            }),
-            (c.reset = function () {
-              if (
-                ((c.paused = false),
-                delete c.startTime,
-                (c.initialized = false),
-                c.initialize())
-              )
-                cancelAnimationFrame(c.rAF), c.printValue(c.startVal);
-            }),
-            (c.update = function (t) {
-              if (c.initialize()) {
-                if (!u((t = Number(t))))
-                  return (
-                    (c.error =
-                      "[CountUp] update() - new endVal is not a number: " + t),
-                    void 0
-                  );
-                if (((c.error = ""), t !== c.frameVal))
-                  cancelAnimationFrame(c.rAF),
-                    (c.paused = false),
+                  c.frameVal =
+                    c.startVal + (c.endVal - c.startVal) * (e / c.duration);
+                if (c.countDown)
+                  c.frameVal = c.frameVal < c.endVal ? c.endVal : c.frameVal;
+                else c.frameVal = c.frameVal > c.endVal ? c.endVal : c.frameVal;
+                if (
+                  ((c.frameVal = Math.round(c.frameVal * c.dec) / c.dec),
+                    c.printValue(c.frameVal),
+                    e < c.duration)
+                )
+                  c.rAF = requestAnimationFrame(c.count);
+                else if (c.callback) c.callback();
+              }),
+              (c.start = function (t) {
+                if (c.initialize())
+                  (c.callback = t), (c.rAF = requestAnimationFrame(c.count));
+              }),
+              (c.pauseResume = function () {
+                if (!c.paused) (c.paused = true), cancelAnimationFrame(c.rAF);
+                else
+                  (c.paused = false),
                     delete c.startTime,
+                    (c.duration = c.remaining),
                     (c.startVal = c.frameVal),
-                    (c.endVal = t),
-                    (c.countDown = c.startVal > c.endVal),
-                    (c.rAF = requestAnimationFrame(c.count));
-              }
-            }),
-            c.initialize())
+                    requestAnimationFrame(c.count);
+              }),
+              (c.reset = function () {
+                if (
+                  ((c.paused = false),
+                    delete c.startTime,
+                    (c.initialized = false),
+                    c.initialize())
+                )
+                  cancelAnimationFrame(c.rAF), c.printValue(c.startVal);
+              }),
+              (c.update = function (t) {
+                if (c.initialize()) {
+                  if (!u((t = Number(t))))
+                    return (
+                      (c.error =
+                        "[CountUp] update() - new endVal is not a number: " + t),
+                      void 0
+                    );
+                  if (((c.error = ""), t !== c.frameVal))
+                    cancelAnimationFrame(c.rAF),
+                      (c.paused = false),
+                      delete c.startTime,
+                      (c.startVal = c.frameVal),
+                      (c.endVal = t),
+                      (c.countDown = c.startVal > c.endVal),
+                      (c.rAF = requestAnimationFrame(c.count));
+                }
+              }),
+              c.initialize())
           )
             c.printValue(c.startVal);
         };
@@ -1234,11 +1241,11 @@
       if (!t) throw new Error("animationInfo is null or undefined");
       if (
         ((this.info = t),
-        (this.hint = e),
-        (this.animatedClass = "animated"),
-        (this.backstageClass = "backstage"),
-        (this.animationInClass = this.getAnimationClass()),
-        this.isInOutAnimation())
+          (this.hint = e),
+          (this.animatedClass = "animated"),
+          (this.backstageClass = "backstage"),
+          (this.animationInClass = this.getAnimationClass()),
+          this.isInOutAnimation())
       )
         this.animationOutClass = this.getAnimationOutClass();
       (this._reqestId = null),
@@ -1275,8 +1282,8 @@
       if (e.target === this.info.element) {
         if (
           ((this._playing = null),
-          a(this.info.element, this.info.duration),
-          this.info.element.classList.contains(this.animationInClass))
+            a(this.info.element, this.info.duration),
+            this.info.element.classList.contains(this.animationInClass))
         )
           this.info.element.classList.remove(this.animationInClass),
             this.info.element.classList.add(this.animationInClass + "-played");
@@ -1411,9 +1418,9 @@
           var e = this.info.duration;
           if (
             (a(this.info.element, e),
-            (this._playing = null),
-            (this._playNext = null),
-            this.backstageClass)
+              (this._playing = null),
+              (this._playNext = null),
+              this.backstageClass)
           )
             this.info.element.classList.add(this.backstageClass);
           if (this.animatedClass)
@@ -1446,7 +1453,7 @@
       (t.exports = n),
       (window.AnimateCssAnimation = n);
   },
-  320: function (t, e) {},
+  320: function (t, e) { },
   41: function (t, e, i) {
     "use strict";
     var n;
@@ -1575,15 +1582,15 @@
                 if (!new RegExp(s).test(u))
                   throw new Error(
                     e.toUpperCase() +
-                      ": " +
-                      'Option "' +
-                      a +
-                      '" provided type "' +
-                      u +
-                      '" ' +
-                      'but expected type "' +
-                      s +
-                      '".'
+                    ": " +
+                    'Option "' +
+                    a +
+                    '" provided type "' +
+                    u +
+                    '" ' +
+                    'but expected type "' +
+                    s +
+                    '".'
                   );
               }
           },
@@ -1611,8 +1618,8 @@
             var i = props[e];
             if (
               ((i.enumerable = i.enumerable || false),
-              (i.configurable = true),
-              "value" in i)
+                (i.configurable = true),
+                "value" in i)
             )
               i.writable = true;
             Object.defineProperty(t, i.key, i);
@@ -1782,12 +1789,12 @@
               (e.dispose = function t() {
                 if (
                   (l["default"](this._element).off(m),
-                  l["default"].removeData(this._element, h),
-                  l["default"].removeData(this._element, p),
-                  (this._items = null),
-                  (this._config = null),
-                  (this._element = null),
-                  this._interval)
+                    l["default"].removeData(this._element, h),
+                    l["default"].removeData(this._element, p),
+                    (this._items = null),
+                    (this._config = null),
+                    (this._element = null),
+                    this._interval)
                 )
                   clearInterval(this._interval);
                 (this._interval = null),
@@ -1831,14 +1838,14 @@
                 var e = this;
                 if (this._touchSupported) {
                   var i = function t(i) {
-                      if (
-                        e._pointerEvent &&
-                        lt[i.originalEvent.pointerType.toUpperCase()]
-                      )
-                        e.touchStartX = i.originalEvent.clientX;
-                      else if (!e._pointerEvent)
-                        e.touchStartX = i.originalEvent.touches[0].clientX;
-                    },
+                    if (
+                      e._pointerEvent &&
+                      lt[i.originalEvent.pointerType.toUpperCase()]
+                    )
+                      e.touchStartX = i.originalEvent.clientX;
+                    else if (!e._pointerEvent)
+                      e.touchStartX = i.originalEvent.touches[0].clientX;
+                  },
                     move = function move(t) {
                       if (
                         t.originalEvent.touches &&
@@ -1870,7 +1877,7 @@
                         return t.preventDefault();
                       }
                     ),
-                    this._pointerEvent)
+                      this._pointerEvent)
                   )
                     l["default"](this._element).on(P, function (t) {
                       return i(t);
@@ -1981,11 +1988,11 @@
                     this._setActiveIndicatorElement(c),
                       (this._activeElement = c);
                     var y = l["default"].Event(I, {
-                        relatedTarget: c,
-                        direction: v,
-                        from: s,
-                        to: f,
-                      }),
+                      relatedTarget: c,
+                      direction: v,
+                      from: s,
+                      to: f,
+                    }),
                       w = null;
                     if (l["default"](this._element).hasClass(U)) {
                       l["default"](c).addClass(m),
@@ -2035,8 +2042,8 @@
                     var o;
                     if (
                       ((data = new Carousel(this, t)),
-                      l["default"](this).data(h, data),
-                      !l["default"](this).data(p))
+                        l["default"](this).data(h, data),
+                        !l["default"](this).data(p))
                     )
                       l["default"](this).data(p, new n(this, t));
                   }
@@ -2054,10 +2061,10 @@
                   var i = l["default"](selector)[0];
                   if (i && l["default"](i).hasClass(U)) {
                     var n = s(
-                        {},
-                        l["default"](i).data(),
-                        l["default"](this).data()
-                      ),
+                      {},
+                      l["default"](i).data(),
+                      l["default"](this).data()
+                    ),
                       o = this.getAttribute("data-u-slide-to");
                     if (o) n.interval = false;
                     if ((Carousel._jQueryInterface.call(l["default"](i), n), o))
@@ -2088,8 +2095,8 @@
           l["default"](window).on(H, function () {
             for (
               var t = [].slice.call(document.querySelectorAll(st)),
-                e = 0,
-                i = t.length;
+              e = 0,
+              i = t.length;
               e < i;
               e++
             ) {
@@ -2169,10 +2176,10 @@
         if (!this.sliding && this.options.swipe && this.startTime)
           if (this.$active) {
             var e = o()
-                .add(this.$active)
-                .add(this.$prev)
-                .add(this.$next)
-                .carousel_transition(true),
+              .add(this.$active)
+              .add(this.$prev)
+              .add(this.$next)
+              .carousel_transition(true),
               i = (t.timeStamp - this.startTime) / 1e3,
               n = Math.abs(this.dx / i);
             if (this.dx > 40 || (this.dx > 0 && n > this.options.swipe))
@@ -2199,7 +2206,7 @@
               .css("transform", "translate3d(0,0,0)")
               .removeClass("u-carousel-item-prev")
               .carousel_transition(true),
-            !this.$next.length || this.$next.hasClass("u-active"))
+              !this.$next.length || this.$next.hasClass("u-active"))
           )
             return;
           this.$next
@@ -2212,7 +2219,7 @@
               .css("transform", "")
               .removeClass("u-carousel-item-next")
               .carousel_transition(true),
-            !this.$prev.length || this.$prev.hasClass("u-active"))
+              !this.$prev.length || this.$prev.hasClass("u-active"))
           )
             return;
           this.$prev
@@ -2228,14 +2235,14 @@
       (n.prototype.getActive = function () {
         if (
           ((this.$active = this.$element.find(".u-carousel-item.u-active")),
-          (this.$items = this.$active.parent().children()),
-          (this.$next = this.$active.next()),
-          !this.$next.length && this.options.wrap)
+            (this.$items = this.$active.parent().children()),
+            (this.$next = this.$active.next()),
+            !this.$next.length && this.options.wrap)
         )
           this.$next = this.$items.first();
         if (
           ((this.$prev = this.$active.prev()),
-          !this.$prev.length && this.options.wrap)
+            !this.$prev.length && this.options.wrap)
         )
           this.$prev = this.$items.last();
         return this.$active;
@@ -2268,24 +2275,24 @@
         var n = e.createElement("script");
         if (
           ((n.type = "text/javascript"),
-          (n.src =
-            "//maps.google.com/maps/api/js?key=" +
-            data.apiKey +
-            "&callback=mapIframeApiReady"),
-          data.lang)
+            (n.src =
+              "//maps.google.com/maps/api/js?key=" +
+              data.apiKey +
+              "&callback=mapIframeApiReady"),
+            data.lang)
         )
           n.src += "&language=" + data.lang;
         e.head.appendChild(i),
           e.head.appendChild(n),
           $(e.body).append(
             "<style>" +
-              "   #map { width: 100%; height: 100%; }" +
-              "   body { margin: 0; }" +
-              "   .marker-internal { width: 180px; font-weight: normal; }" +
-              "   .marker-internal a { text-decoration: none; color:#427fed; }" +
-              "   .marker-internal strong { font-weight: 500; font-size: 14px; }" +
-              "</style>" +
-              '<div id="map"></div>'
+            "   #map { width: 100%; height: 100%; }" +
+            "   body { margin: 0; }" +
+            "   .marker-internal { width: 180px; font-weight: normal; }" +
+            "   .marker-internal a { text-decoration: none; color:#427fed; }" +
+            "   .marker-internal strong { font-weight: 500; font-size: 14px; }" +
+            "</style>" +
+            '<div id="map"></div>'
           );
       }
     }
@@ -2320,13 +2327,13 @@
         if (!e) e = 14;
         if (
           ((e = parseInt(e, 10)),
-          (data.map = data.map || {}),
-          (data.map.zoom = e),
-          (data.map.mapTypeId =
-            "satellite" === data.typeId
-              ? google.maps.MapTypeId.HYBRID
-              : google.maps.MapTypeId.ROADMAP),
-          data.markers.length)
+            (data.map = data.map || {}),
+            (data.map.zoom = e),
+            (data.map.mapTypeId =
+              "satellite" === data.typeId
+                ? google.maps.MapTypeId.HYBRID
+                : google.maps.MapTypeId.ROADMAP),
+            data.markers.length)
         )
           data.map.center = data.markers[0].position;
         var map = new google.maps.Map(t, data.map || {}),
@@ -2346,7 +2353,7 @@
               });
             }
           }),
-          data.markers.length > 1 && e && !isNaN(e))
+            data.markers.length > 1 && e && !isNaN(e))
         ) {
           map.fitBounds(i);
           var n = google.maps.event.addListener(
@@ -2355,7 +2362,7 @@
             function () {
               if (
                 (google.maps.event.removeListener(n),
-                map.getZoom() > e || 0 === map.getZoom())
+                  map.getZoom() > e || 0 === map.getZoom())
               )
                 map.setZoom(e);
             }
@@ -2522,8 +2529,8 @@
           if (ResponsiveMenu.isActive(menu)) this.closeMenu(menu, t);
         } else if (
           (this.closeMenu(menu, t),
-          this.setOverlayOpacity(menu),
-          ResponsiveMenu.isOffcanvasMode(menu))
+            this.setOverlayOpacity(menu),
+            ResponsiveMenu.isOffcanvasMode(menu))
         )
           app.modes().resetOffCanvas();
       }),
@@ -2540,8 +2547,8 @@
           if (!ResponsiveMenu.isActive(menu)) this.openMenu(menu);
         } else if (
           (this.setOverlayOpacity(menu),
-          this.openMenu(menu),
-          ResponsiveMenu.isOffcanvasMode(menu))
+            this.openMenu(menu),
+            ResponsiveMenu.isOffcanvasMode(menu))
         )
           app.modes().setOffCanvas();
       }),
@@ -2558,25 +2565,25 @@
         var e = this.root;
         if (
           (menu.addClass("open"),
-          e.addClass("u-offcanvas-opened"),
-          menu.is(".u-offcanvas-shift"))
+            e.addClass("u-offcanvas-opened"),
+            menu.is(".u-offcanvas-shift"))
         )
           e.addClass(
             "u-offcanvas-shifted-" +
-              (menu.hasClass("u-menu-open-right") ? "right" : "left")
+            (menu.hasClass("u-menu-open-right") ? "right" : "left")
           );
       }),
       (ResponsiveMenu.prototype.offcanvasMenuClose = function t(menu) {
         if (
           (menu.removeClass("open"),
-          this.root.removeClass(
-            "u-offcanvas-opened u-offcanvas-shifted-left u-offcanvas-shifted-right"
-          ),
-          menu.is(".u-offcanvas-shift"))
+            this.root.removeClass(
+              "u-offcanvas-opened u-offcanvas-shifted-left u-offcanvas-shifted-right"
+            ),
+            menu.is(".u-offcanvas-shift"))
         )
           this.root.addClass(
             "u-offcanvas-unshifted-" +
-              (menu.hasClass("u-menu-open-right") ? "right" : "left")
+            (menu.hasClass("u-menu-open-right") ? "right" : "left")
           );
       }),
       (ResponsiveMenu.prototype.megaResize = function t(menu, e) {
@@ -2589,19 +2596,19 @@
                   i = t.attr("data-mega-width") || "content";
                 if ("custom" !== i && "content" !== i) {
                   var o =
-                      "sheet" === i
-                        ? menu.closest(".u-sheet, .u-body")
-                        : menu.closest("body, .u-body"),
+                    "sheet" === i
+                      ? menu.closest(".u-sheet, .u-body")
+                      : menu.closest("body, .u-body"),
                     a = o.offset(),
                     s = o.outerWidth();
                   if (
                     (t.css({ left: "", width: "" }),
-                    t.removeClass("u-popup-left u-popup-right"),
-                    t.addClass("u-hidden"),
-                    menu.outerHeight(),
-                    t.removeClass("u-hidden"),
-                    menu.outerHeight(),
-                    "content" === i)
+                      t.removeClass("u-popup-left u-popup-right"),
+                      t.addClass("u-hidden"),
+                      menu.outerHeight(),
+                      t.removeClass("u-hidden"),
+                      menu.outerHeight(),
+                      "content" === i)
                   )
                     return t.css("width", "auto"), void 0;
                   var l = t.offset(),
@@ -2659,7 +2666,7 @@
                 a;
               if (
                 (t.removeClass(i + " " + o),
-                "content" === (t.attr("data-mega-width") || "content"))
+                  "content" === (t.attr("data-mega-width") || "content"))
               ) {
                 var s = "";
                 if (t.parents("." + i).length) s = i;
@@ -2767,14 +2774,14 @@
             var style = document.createElement("div").style;
             if (void 0 === e) {
               var i = function (t, e) {
-                  var i = t.split(e);
-                  if (i.length > 1)
-                    return i
-                      .map(function (t, index, e) {
-                        return index % 2 == 0 ? t + e[index + 1] : "";
-                      })
-                      .filter(Boolean);
-                },
+                var i = t.split(e);
+                if (i.length > 1)
+                  return i
+                    .map(function (t, index, e) {
+                      return index % 2 == 0 ? t + e[index + 1] : "";
+                    })
+                    .filter(Boolean);
+              },
                 n = i(t, /([)])\s*or\s*([(])/gi);
               if (n)
                 return n.some(function (t) {
@@ -2800,19 +2807,19 @@
     function n(t) {
       if (
         ((this.prevMode = ""),
-        (this.resizeTimeout = 50),
-        (this.sheet = {
-          XS: 340,
-          SM: 540,
-          MD: 720,
-          LG: 940,
-          XL: 1140,
-          XXL: 1320,
-        }),
-        (this.mediaMax = { XS: 575, SM: 767, MD: 991, LG: 1199 }),
-        (this.modes = ["XL", "LG", "MD", "SM", "XS"]),
-        (this.defaultMode = "XL"),
-        document.body.classList.contains("u-xxl-mode"))
+          (this.resizeTimeout = 50),
+          (this.sheet = {
+            XS: 340,
+            SM: 540,
+            MD: 720,
+            LG: 940,
+            XL: 1140,
+            XXL: 1320,
+          }),
+          (this.mediaMax = { XS: 575, SM: 767, MD: 991, LG: 1199 }),
+          (this.modes = ["XL", "LG", "MD", "SM", "XS"]),
+          (this.defaultMode = "XL"),
+          document.body.classList.contains("u-xxl-mode"))
       )
         (this.mediaMax.XXL = 1399),
           (this.defaultMode = "XXL"),
@@ -2988,7 +2995,7 @@
           )
             l =
               o(this).attr("redirect-url") &&
-              !o.isNumeric(o(this).attr("redirect-url"))
+                !o.isNumeric(o(this).attr("redirect-url"))
                 ? o(this).attr("redirect-url")
                 : o(this).attr("redirect-address");
           if (/list-manage[1-9]?.com/i.test(url))
@@ -3200,10 +3207,10 @@
             var e = this.buildOptions(t, items);
             if (
               ((e.showAnimationDuration = 0),
-              (e.index = parseFloat(index) - 1),
-              (e.showPreviews =
-                gallery.dom.classList.contains("u-product-control")),
-              e.galleryPIDs)
+                (e.index = parseFloat(index) - 1),
+                (e.showPreviews =
+                  gallery.dom.classList.contains("u-product-control")),
+                e.galleryPIDs)
             )
               for (var i = 0; i < items.length; i++)
                 if (items[i].pid == index) {
@@ -3275,10 +3282,10 @@
           }, i);
         else if (t.is("img")) {
           var a =
-              t[0].naturalWidth ||
-              t.attr("data-image-width") ||
-              t.attr("imgwidth") ||
-              t.width(),
+            t[0].naturalWidth ||
+            t.attr("data-image-width") ||
+            t.attr("imgwidth") ||
+            t.width(),
             s =
               t[0].naturalHeight ||
               t.attr("data-image-height") ||
@@ -3457,7 +3464,7 @@
       if (true)
         !(
           void 0 !==
-            (o = "function" == typeof (n = factory) ? n.call(e, i, e, t) : n) &&
+          (o = "function" == typeof (n = factory) ? n.call(e, i, e, t) : n) &&
           (t.exports = o)
         );
       else if ("object" == typeof e) t.exports = factory();
@@ -3505,13 +3512,13 @@
             );
           },
           getChildByClass: function (t, e) {
-            for (var n = t.firstChild; n; ) {
+            for (var n = t.firstChild; n;) {
               if (i.hasClass(n, e)) return n;
               n = n.nextSibling;
             }
           },
           arraySearch: function (t, e, i) {
-            for (var n = t.length; n--; ) if (t[n][i] === e) return n;
+            for (var n = t.length; n--;) if (t[n][i] === e) return n;
             return -1;
           },
           extend: function (t, e, i) {
@@ -3544,15 +3551,15 @@
               o = {};
             if (
               ((o.oldIE = document.all && !document.addEventListener),
-              (o.touch = "ontouchstart" in window),
-              window.requestAnimationFrame)
+                (o.touch = "ontouchstart" in window),
+                window.requestAnimationFrame)
             )
               (o.raf = window.requestAnimationFrame),
                 (o.caf = window.cancelAnimationFrame);
             if (
               ((o.pointerEvent =
                 !!window.PointerEvent || navigator.msPointerEnabled),
-              !o.pointerEvent)
+                !o.pointerEvent)
             ) {
               var a = navigator.userAgent;
               if (/iP(hone|od)/.test(navigator.platform)) {
@@ -3571,10 +3578,10 @@
             }
             for (
               var c = ["transform", "perspective", "animationName"],
-                f = ["", "webkit", "Moz", "ms", "O"],
-                h,
-                p,
-                m = 0;
+              f = ["", "webkit", "Moz", "ms", "O"],
+              h,
+              p,
+              m = 0;
               m < 4;
               m++
             ) {
@@ -3582,15 +3589,15 @@
               for (var v = 0; v < 3; v++)
                 if (
                   ((h = c[v]),
-                  (p = n + (n ? h.charAt(0).toUpperCase() + h.slice(1) : h)),
-                  !o[h] && p in e)
+                    (p = n + (n ? h.charAt(0).toUpperCase() + h.slice(1) : h)),
+                    !o[h] && p in e)
                 )
                   o[h] = p;
               if (n && !o.raf)
                 if (
                   ((n = n.toLowerCase()),
-                  (o.raf = window[n + "RequestAnimationFrame"]),
-                  o.raf)
+                    (o.raf = window[n + "RequestAnimationFrame"]),
+                    o.raf)
                 )
                   o.caf =
                     window[n + "CancelAnimationFrame"] ||
@@ -3625,11 +3632,11 @@
             type = type.split(" ");
             for (
               var n = (i ? "detach" : "attach") + "Event",
-                o,
-                a = function () {
-                  e.handleEvent.call(e);
-                },
-                s = 0;
+              o,
+              a = function () {
+                e.handleEvent.call(e);
+              },
+              s = 0;
               s < type.length;
               s++
             )
@@ -3674,8 +3681,8 @@
           };
         i.extend(s, e);
         var l = function () {
-            return { x: 0, y: 0 };
-          },
+          return { x: 0, y: 0 };
+        },
           u,
           c,
           f,
@@ -3815,10 +3822,10 @@
           Tt = function () {
             if (
               (i.unbind(window, "resize scroll orientationchange", n),
-              i.unbind(window, "scroll", x.scroll),
-              i.unbind(document, "keydown", n),
-              i.unbind(document, "mousemove", _t),
-              tt.transform)
+                i.unbind(window, "scroll", x.scroll),
+                i.unbind(document, "keydown", n),
+                i.unbind(document, "mousemove", _t),
+                tt.transform)
             )
               i.unbind(n.scrollWrap, "click", n);
             if (le) i.unbind(window, w, n);
@@ -4011,8 +4018,8 @@
                 }
                 if (
                   (ct("firstUpdate"),
-                  (h = h || s.index || 0),
-                  isNaN(h) || h < 0 || h >= bi())
+                    (h = h || s.index || 0),
+                    isNaN(h) || h < 0 || h >= bi())
                 )
                   h = 0;
                 if (((n.currItem = wi(h)), tt.isOldIOSPhone || tt.isOldAndroid))
@@ -4028,13 +4035,13 @@
                 if (s.showHideOpacity) f += "pswp--animate_opacity ";
                 for (
                   f += W ? "pswp--touch" : "pswp--notouch",
-                    f += tt.animationName ? " pswp--css_animation" : "",
-                    f += tt.svg ? " pswp--svg" : "",
-                    i.addClass(template, f),
-                    n.updateSize(),
-                    m = -1,
-                    z = null,
-                    e = 0;
+                  f += tt.animationName ? " pswp--css_animation" : "",
+                  f += tt.svg ? " pswp--svg" : "",
+                  i.addClass(template, f),
+                  n.updateSize(),
+                  m = -1,
+                  z = null,
+                  e = 0;
                   e < a;
                   e++
                 )
@@ -4044,17 +4051,17 @@
                   (ut("initialZoomInEnd", function () {
                     if (
                       (n.setContent(F[0], h - 1),
-                      n.setContent(F[2], h + 1),
-                      (F[0].el.style.display = F[2].el.style.display = "block"),
-                      s.focus)
+                        n.setContent(F[2], h + 1),
+                        (F[0].el.style.display = F[2].el.style.display = "block"),
+                        s.focus)
                     )
                       template.focus();
                     Ct();
                   }),
-                  n.setContent(F[1], h),
-                  n.updateCurrItem(),
-                  ct("afterInit"),
-                  !V)
+                    n.setContent(F[1], h),
+                    n.updateCurrItem(),
+                    ct("afterInit"),
+                    !V)
                 )
                   k = setInterval(function () {
                     if (!Pt && !le && !ye && C === n.currItem.initialZoomLevel)
@@ -4075,8 +4082,8 @@
               if ((ct("destroy"), ui)) clearTimeout(ui);
               if (
                 (template.setAttribute("aria-hidden", "true"),
-                (template.className = K),
-                k)
+                  (template.className = K),
+                  k)
               )
                 clearInterval(k);
               i.unbind(n.scrollWrap, b, n),
@@ -4123,10 +4130,10 @@
               } else Ce = null;
               if (
                 ((xe = n.currItem.bounds),
-                (T = C = n.currItem.initialZoomLevel),
-                (y.x = xe.center.x),
-                (y.y = xe.center.y),
-                t)
+                  (T = C = n.currItem.initialZoomLevel),
+                  (y.x = xe.center.x),
+                  (y.y = xe.center.y),
+                  t)
               )
                 ct("afterChange");
             },
@@ -4142,9 +4149,9 @@
                 if (!(t && e < 2)) {
                   if (
                     ((n.currItem = wi(h)),
-                    (ot = false),
-                    ct("beforeChange", z),
-                    e >= a)
+                      (ot = false),
+                      ct("beforeChange", z),
+                      e >= a)
                   )
                     (m += z + (z > 0 ? -a : a)), (e = a);
                   for (var o = 0; o < e; o++)
@@ -4184,20 +4191,20 @@
               }
               if (
                 ((_.x = n.scrollWrap.clientWidth),
-                (_.y = n.scrollWrap.clientHeight),
-                Mt(),
-                (O.x = _.x + Math.round(_.x * s.spacing)),
-                (O.y = _.y),
-                gt(O.x * E),
-                ct("beforeResize"),
-                void 0 !== m)
+                  (_.y = n.scrollWrap.clientHeight),
+                  Mt(),
+                  (O.x = _.x + Math.round(_.x * s.spacing)),
+                  (O.y = _.y),
+                  gt(O.x * E),
+                  ct("beforeResize"),
+                  void 0 !== m)
               ) {
                 for (var o, l, u, c = 0; c < a; c++) {
                   if (
                     ((o = F[c]),
-                    vt((c + m) * O.x, o.el.style),
-                    (u = h + c - 1),
-                    s.loop && bi() > 2)
+                      vt((c + m) * O.x, o.el.style),
+                      (u = h + c - 1),
+                      s.loop && bi() > 2)
                   )
                     u = st(u);
                   if ((l = wi(u)) && (I || l.needsUpdate || !l.bounds)) {
@@ -4211,7 +4218,7 @@
               }
               if (
                 ((T = C = n.currItem.initialZoomLevel),
-                (xe = n.currItem.bounds))
+                  (xe = n.currItem.bounds))
               )
                 (y.x = xe.center.x), (y.y = xe.center.y), pt(true);
               ct("resize");
@@ -4346,7 +4353,7 @@
           Ye = [],
           Ge,
           Qe = function (t) {
-            for (; Ye.length > 0; ) Ye.pop();
+            for (; Ye.length > 0;) Ye.pop();
             if (!U)
               if (t.type.indexOf("touch") > -1) {
                 if (t.touches && t.touches.length > 0)
@@ -4377,7 +4384,7 @@
             else i = 1;
             if (
               ((a = y[t] + e[t] * i),
-              s.allowPanToNext || C === n.currItem.initialZoomLevel)
+                s.allowPanToNext || C === n.currItem.initialZoomLevel)
             ) {
               if (!Ce) p = c;
               else if ("h" === ke && "x" === t && !ce)
@@ -4479,14 +4486,14 @@
               if (0 !== t)
                 if (
                   (wt(Zt, ge[0]),
-                  (jt.x = Zt.x - Kt.x),
-                  (jt.y = Zt.y - Kt.y),
-                  ye && t > 1)
+                    (jt.x = Zt.x - Kt.x),
+                    (jt.y = Zt.y - Kt.y),
+                    ye && t > 1)
                 ) {
                   if (
                     ((Kt.x = Zt.x),
-                    (Kt.y = Zt.y),
-                    !jt.x && !jt.y && Fe(ge[1], Xt))
+                      (Kt.y = Zt.y),
+                      !jt.x && !jt.y && Fe(ge[1], Xt))
                   )
                     return;
                   if ((wt(Xt, ge[1]), !ce))
@@ -4496,7 +4503,7 @@
                   if (
                     i >
                     n.currItem.initialZoomLevel +
-                      n.currItem.initialZoomLevel / 15
+                    n.currItem.initialZoomLevel / 15
                   )
                     Oe = true;
                   var o = 1,
@@ -4554,9 +4561,9 @@
                   var h;
                   if (
                     (Ze(ft(), Zt.x, Zt.y),
-                    (fe = true),
-                    (xe = n.currItem.bounds),
-                    !Je("x", jt))
+                      (fe = true),
+                      (xe = n.currItem.bounds),
+                      !Je("x", jt))
                   )
                     Je("y", jt), bt(y), pt();
                 }
@@ -4665,8 +4672,8 @@
                   else (t = ft() - Vt), (e = Yt[i]);
                   if (
                     ((n.lastFlickOffset[i] = Kt[i] - e),
-                    (n.lastFlickDist[i] = Math.abs(n.lastFlickOffset[i])),
-                    n.lastFlickDist[i] > 20)
+                      (n.lastFlickDist[i] = Math.abs(n.lastFlickOffset[i])),
+                      n.lastFlickDist[i] > 20)
                   )
                     n.lastFlickSpeed[i] = n.lastFlickOffset[i] / t;
                   else n.lastFlickSpeed[i] = 0;
@@ -4684,8 +4691,8 @@
                     if (void 0 !== n.backAnimDestination[t])
                       if (
                         ((n.slowDownRatio[t] = 0.7),
-                        (n.slowDownRatioReverse[t] = 1 - n.slowDownRatio[t]),
-                        n.speedDecelerationRatioAbs[t] < 0.05)
+                          (n.slowDownRatioReverse[t] = 1 - n.slowDownRatio[t]),
+                          n.speedDecelerationRatioAbs[t] < 0.05)
                       )
                         (n.lastFlickSpeed[t] = 0),
                           (n.backAnimStarted[t] = true),
@@ -4721,15 +4728,15 @@
                   if (zt.zoomPan)
                     if (
                       ((zt.zoomPan.raf = X(n.panAnimLoop)),
-                      (n.now = ft()),
-                      (n.timeDiff = n.now - n.lastNow),
-                      (n.lastNow = n.now),
-                      n.calculateAnimOffset("x"),
-                      n.calculateAnimOffset("y"),
-                      pt(),
-                      n.calculateOverBoundsAnimOffset("x"),
-                      n.calculateOverBoundsAnimOffset("y"),
-                      n.speedDecelerationRatioAbs.x < 0.05 &&
+                        (n.now = ft()),
+                        (n.timeDiff = n.now - n.lastNow),
+                        (n.lastNow = n.now),
+                        n.calculateAnimOffset("x"),
+                        n.calculateAnimOffset("y"),
+                        pt(),
+                        n.calculateOverBoundsAnimOffset("x"),
+                        n.calculateOverBoundsAnimOffset("y"),
+                        n.speedDecelerationRatioAbs.x < 0.05 &&
                         n.speedDecelerationRatioAbs.y < 0.05)
                     )
                       return (
@@ -4746,10 +4753,10 @@
           ri = function (t) {
             if (
               (t.calculateSwipeSpeed("y"),
-              (xe = n.currItem.bounds),
-              (t.backAnimDestination = {}),
-              (t.backAnimStarted = {}),
-              Math.abs(t.lastFlickSpeed.x) <= 0.05 &&
+                (xe = n.currItem.bounds),
+                (t.backAnimDestination = {}),
+                (t.backAnimStarted = {}),
+                Math.abs(t.lastFlickSpeed.x) <= 0.05 &&
                 Math.abs(t.lastFlickSpeed.y) <= 0.05)
             )
               return (
@@ -4789,13 +4796,13 @@
             if (re === h) o = false;
             if (
               ((Te = true),
-              ct("mainScrollAnimStart"),
-              Ht("mainScroll", _e.x, f, m, i.easing.cubic.out, gt, function () {
-                if (($t(), (Te = false), (re = -1), o || re !== h))
-                  n.updateCurrItem();
-                ct("mainScrollAnimComplete");
-              }),
-              o)
+                ct("mainScrollAnimStart"),
+                Ht("mainScroll", _e.x, f, m, i.easing.cubic.out, gt, function () {
+                  if (($t(), (Te = false), (re = -1), o || re !== h))
+                    n.updateCurrItem();
+                  ct("mainScrollAnimComplete");
+                }),
+                o)
             )
               n.updateCurrItem(true);
             return o;
@@ -4840,10 +4847,10 @@
                   navigator.msMaxTouchPoints > 1;
               if (
                 ((n.likelyTouchDevice = W),
-                (x[P] = ti),
-                (x[N] = ei),
-                (x[$] = ni),
-                H)
+                  (x[P] = ti),
+                  (x[N] = ei),
+                  (x[$] = ni),
+                  H)
               )
                 x[H] = x[$];
               if (tt.touch)
@@ -4908,10 +4915,10 @@
                     if ((ct("initialZoom" + (o ? "Out" : "In")), !o)) {
                       if (
                         ((C = t.initialZoomLevel),
-                        wt(y, t.initialPosition),
-                        pt(),
-                        dt(1),
-                        a)
+                          wt(y, t.initialPosition),
+                          pt(),
+                          dt(1),
+                          a)
                       )
                         template.style.opacity = 1;
                       else dt(1);
@@ -4940,12 +4947,12 @@
               })();
             } else if (
               (ct("initialZoom" + (o ? "Out" : "In")),
-              (C = t.initialZoomLevel),
-              wt(y, t.initialPosition),
-              pt(),
-              (template.style.opacity = o ? 0 : 1),
-              dt(1),
-              u)
+                (C = t.initialZoomLevel),
+                wt(y, t.initialPosition),
+                pt(),
+                (template.style.opacity = o ? 0 : 1),
+                dt(1),
+                u)
             )
               setTimeout(function () {
                 c();
@@ -5033,9 +5040,9 @@
               if (i)
                 if (
                   ((t.imageAppended = true),
-                  Ii(t, i, t === n.currItem && ot),
-                  e.appendChild(i),
-                  a)
+                    Ii(t, i, t === n.currItem && ot),
+                    e.appendChild(i),
+                    a)
                 )
                   setTimeout(function () {
                     if (t && t.loaded && t.placeholder)
@@ -5107,11 +5114,11 @@
             initController: function () {
               if (
                 (i.extend(s, yi, true),
-                (n.items = di = items),
-                (wi = n.getItemAt),
-                (bi = s.getNumItemsFn),
-                (xi = s.loop),
-                bi() < 3)
+                  (n.items = di = items),
+                  (wi = n.getItemAt),
+                  (bi = s.getNumItemsFn),
+                  (xi = s.loop),
+                  bi() < 3)
               )
                 s.loop = false;
               ut("beforeChange", function (diff) {
@@ -5172,9 +5179,9 @@
                         if (ki(e, true)) {
                           if (
                             ((e.loadComplete = e.img = null),
-                            Ti(e, _),
-                            mt(e),
-                            t.index === h)
+                              Ti(e, _),
+                              mt(e),
+                              t.index === h)
                           )
                             n.updateCurrZoomItem();
                           return;
@@ -5199,7 +5206,7 @@
                         ct("imageLoadComplete", index, e);
                     }
                   }),
-                  i.features.transform)
+                    i.features.transform)
                 ) {
                   var c = "pswp__img pswp__img--placeholder";
                   c += o.msrc ? "" : " pswp__img--placeholder--blank";
@@ -5318,13 +5325,13 @@
                   };
                 if (
                   (ut("resize", o),
-                  ut("afterChange", o),
-                  ut("pointerDown", function () {
-                    if (n.mouseZoomedIn)
-                      (e = true), i.addClass(template, "pswp--dragging");
-                  }),
-                  ut("pointerUp", a),
-                  !t)
+                    ut("afterChange", o),
+                    ut("pointerDown", function () {
+                      if (n.mouseZoomedIn)
+                        (e = true), i.addClass(template, "pswp--dragging");
+                    }),
+                    ut("pointerUp", a),
+                    !t)
                 )
                   o();
               },
@@ -5444,12 +5451,12 @@
               if ((i.extend(s, zi, true), s.history)) {
                 if (
                   ((Xi = window.location),
-                  (Zi = false),
-                  (Wi = false),
-                  (Ui = false),
-                  (Bi = Ki()),
-                  (ji = "pushState" in history),
-                  Bi.indexOf("gid=") > -1)
+                    (Zi = false),
+                    (Wi = false),
+                    (Ui = false),
+                    (Bi = Ki()),
+                    (ji = "pushState" in history),
+                    Bi.indexOf("gid=") > -1)
                 )
                   Bi = (Bi = Bi.split("&gid=")[0]).split("?gid=")[0];
                 ut("afterChange", n.updateURL),
@@ -5512,7 +5519,7 @@
       if (true)
         !(
           void 0 !==
-            (o = "function" == typeof (n = factory) ? n.call(e, i, e, t) : n) &&
+          (o = "function" == typeof (n = factory) ? n.call(e, i, e, t) : n) &&
           (t.exports = o)
         );
       else if ("object" == typeof e) t.exports = factory();
@@ -5605,10 +5612,10 @@
               H();
             for (
               var i,
-                n,
-                o = (t.target || t.srcElement).getAttribute("class") || "",
-                a,
-                s = 0;
+              n,
+              o = (t.target || t.srcElement).getAttribute("class") || "",
+              a,
+              s = 0;
               s < K.length;
               s++
             )
@@ -5663,10 +5670,10 @@
                 i.href,
                 "pswp_share",
                 "scrollbars=yes,resizable=yes,toolbar=no," +
-                  "location=yes,width=550,height=420,top=100,left=" +
-                  (window.screen ? Math.round(screen.width / 2 - 275) : 100)
+                "location=yes,width=550,height=420,top=100,left=" +
+                (window.screen ? Math.round(screen.width / 2 - 275) : 100)
               ),
-              !p)
+                !p)
             )
               O();
             return false;
@@ -5679,25 +5686,25 @@
             )
               if (
                 ((e = _.shareButtons[s]),
-                (n = _.getImageURLForShare(e)),
-                (o = _.getPageURLForShare(e)),
-                (a = _.getTextForShare(e)),
-                (t +=
-                  '<a href="' +
-                  (i = e.url
-                    .replace("{{url}}", encodeURIComponent(o))
-                    .replace("{{image_url}}", encodeURIComponent(n))
-                    .replace("{{raw_image_url}}", n)
-                    .replace("{{text}}", encodeURIComponent(a))) +
-                  '" target="_blank" ' +
-                  'class="pswp__share--' +
-                  e.id +
-                  '"' +
-                  (e.download ? "download" : "") +
-                  ">" +
-                  e.label +
-                  "</a>"),
-                _.parseShareButtonOut)
+                  (n = _.getImageURLForShare(e)),
+                  (o = _.getPageURLForShare(e)),
+                  (a = _.getTextForShare(e)),
+                  (t +=
+                    '<a href="' +
+                    (i = e.url
+                      .replace("{{url}}", encodeURIComponent(o))
+                      .replace("{{image_url}}", encodeURIComponent(n))
+                      .replace("{{raw_image_url}}", n)
+                      .replace("{{text}}", encodeURIComponent(a))) +
+                    '" target="_blank" ' +
+                    'class="pswp__share--' +
+                    e.id +
+                    '"' +
+                    (e.download ? "download" : "") +
+                    ">" +
+                    e.label +
+                    "</a>"),
+                  _.parseShareButtonOut)
               )
                 t = _.parseShareButtonOut(e, t);
             (h.children[0].innerHTML = t), (h.children[0].onclick = F);
@@ -5867,7 +5874,7 @@
                         if (_[n.option]) {
                           if (
                             (e.removeClass(t, "pswp__element--disabled"),
-                            n.onInit)
+                              n.onInit)
                           )
                             n.onInit(t);
                         } else e.addClass(t, "pswp__element--disabled");
@@ -5880,77 +5887,77 @@
         (i.init = function () {
           if (
             (e.extend(t.options, C, true),
-            (_ = t.options),
-            (s = e.getChildByClass(t.scrollWrap, "pswp__ui")),
-            (g = t.listen),
-            j(),
-            g("beforeChange", i.update),
-            g("doubleTap", function (e) {
-              var i = t.currItem.initialZoomLevel;
-              if (t.getZoomLevel() !== i) t.zoomTo(i, e, 333);
-              else t.zoomTo(_.getDoubleTapZoom(false, t.currItem), e, 333);
-            }),
-            g("preventDragEvent", function (t, e, i) {
-              var n = t.target || t.srcElement;
-              if (
-                n &&
-                n.getAttribute("class") &&
-                t.type.indexOf("mouse") > -1 &&
-                (n.getAttribute("class").indexOf("__caption") > 0 ||
-                  /(SMALL|STRONG|EM)/i.test(n.tagName))
-              )
-                i.prevent = false;
-            }),
-            g("bindEvents", function () {
-              if (
-                (e.bind(s, "pswpTap click", A),
-                e.bind(t.scrollWrap, "pswpTap", i.onGlobalTap),
-                !t.likelyTouchDevice)
-              )
-                e.bind(t.scrollWrap, "mouseover", i.onMouseOver);
-            }),
-            g("unbindEvents", function () {
-              if (!p) O();
-              if (P) clearInterval(P);
-              if (
-                (e.unbind(document, "mouseout", B),
-                e.unbind(document, "mousemove", H),
-                e.unbind(s, "pswpTap click", A),
-                e.unbind(t.scrollWrap, "pswpTap", i.onGlobalTap),
-                e.unbind(t.scrollWrap, "mouseover", i.onMouseOver),
-                a)
-              ) {
+              (_ = t.options),
+              (s = e.getChildByClass(t.scrollWrap, "pswp__ui")),
+              (g = t.listen),
+              j(),
+              g("beforeChange", i.update),
+              g("doubleTap", function (e) {
+                var i = t.currItem.initialZoomLevel;
+                if (t.getZoomLevel() !== i) t.zoomTo(i, e, 333);
+                else t.zoomTo(_.getDoubleTapZoom(false, t.currItem), e, 333);
+              }),
+              g("preventDragEvent", function (t, e, i) {
+                var n = t.target || t.srcElement;
                 if (
-                  (e.unbind(document, a.eventK, i.updateFullscreen),
-                  a.isFullscreen())
+                  n &&
+                  n.getAttribute("class") &&
+                  t.type.indexOf("mouse") > -1 &&
+                  (n.getAttribute("class").indexOf("__caption") > 0 ||
+                    /(SMALL|STRONG|EM)/i.test(n.tagName))
                 )
-                  (_.hideAnimationDuration = 0), a.exit();
-                a = null;
-              }
-            }),
-            g("destroy", function () {
-              if (_.captionEl) {
-                if (u) s.removeChild(u);
-                e.removeClass(l, "pswp__caption--empty");
-              }
-              if (h) h.children[0].onclick = null;
-              e.removeClass(s, "pswp__ui--over-close"),
-                e.addClass(s, "pswp__ui--hidden"),
-                i.setIdle(false);
-            }),
-            !_.showAnimationDuration)
+                  i.prevent = false;
+              }),
+              g("bindEvents", function () {
+                if (
+                  (e.bind(s, "pswpTap click", A),
+                    e.bind(t.scrollWrap, "pswpTap", i.onGlobalTap),
+                    !t.likelyTouchDevice)
+                )
+                  e.bind(t.scrollWrap, "mouseover", i.onMouseOver);
+              }),
+              g("unbindEvents", function () {
+                if (!p) O();
+                if (P) clearInterval(P);
+                if (
+                  (e.unbind(document, "mouseout", B),
+                    e.unbind(document, "mousemove", H),
+                    e.unbind(s, "pswpTap click", A),
+                    e.unbind(t.scrollWrap, "pswpTap", i.onGlobalTap),
+                    e.unbind(t.scrollWrap, "mouseover", i.onMouseOver),
+                    a)
+                ) {
+                  if (
+                    (e.unbind(document, a.eventK, i.updateFullscreen),
+                      a.isFullscreen())
+                  )
+                    (_.hideAnimationDuration = 0), a.exit();
+                  a = null;
+                }
+              }),
+              g("destroy", function () {
+                if (_.captionEl) {
+                  if (u) s.removeChild(u);
+                  e.removeClass(l, "pswp__caption--empty");
+                }
+                if (h) h.children[0].onclick = null;
+                e.removeClass(s, "pswp__ui--over-close"),
+                  e.addClass(s, "pswp__ui--hidden"),
+                  i.setIdle(false);
+              }),
+              !_.showAnimationDuration)
           )
             e.removeClass(s, "pswp__ui--hidden");
           if (
             (g("initialZoomIn", function () {
               if (_.showAnimationDuration) e.removeClass(s, "pswp__ui--hidden");
             }),
-            g("initialZoomOut", function () {
-              e.addClass(s, "pswp__ui--hidden");
-            }),
-            g("parseVerticalMargin", Z),
-            Y(),
-            _.shareEl && f && h)
+              g("initialZoomOut", function () {
+                e.addClass(s, "pswp__ui--hidden");
+              }),
+              g("parseVerticalMargin", Z),
+              Y(),
+              _.shareEl && f && h)
           )
             p = true;
           E(), X(), U(), V();
@@ -6062,8 +6069,8 @@
               (i.enter = function () {
                 if (
                   ((m = _.closeOnScroll),
-                  (_.closeOnScroll = false),
-                  "webkitRequestFullscreen" === this.enterK)
+                    (_.closeOnScroll = false),
+                    "webkitRequestFullscreen" === this.enterK)
                 )
                   t.template[this.enterK](Element.ALLOW_KEYBOARD_INPUT);
                 else return t.template[this.enterK]();
@@ -6105,7 +6112,7 @@
               var t = n(this);
               if (
                 (t.css("background-attachment", "fixed"),
-                t.hasClass("u-shading"))
+                  t.hasClass("u-shading"))
               )
                 t.attr(
                   "data-bottom-top",
@@ -6141,36 +6148,36 @@
         function o(t) {
           if (
             ((c = i.documentElement),
-            (f = i.body),
-            G(),
-            (Ot = this),
-            (Nt = (t = t || {}).constants || {}),
-            t.easing)
+              (f = i.body),
+              G(),
+              (Ot = this),
+              (Nt = (t = t || {}).constants || {}),
+              t.easing)
           )
             for (var n in t.easing) nt[n] = t.easing[n];
           if (
             ((Qt = t.edgeStrategy || "set"),
-            (Mt = {
-              beforerender: t.beforerender,
-              render: t.render,
-              keyframe: t.keyframe,
-            }),
-            (zt = false !== t.forceHeight))
+              (Mt = {
+                beforerender: t.beforerender,
+                render: t.render,
+                keyframe: t.keyframe,
+              }),
+              (zt = false !== t.forceHeight))
           )
             Rt = t.scale || 1;
           if (
             (($t = t.mobileDeceleration || k),
-            (Xt = false !== t.smoothScrolling),
-            (jt = t.smoothScrollingDuration || E),
-            (Kt = { targetTop: Ot.getScrollTop() }),
-            (Jt = (
-              t.mobileCheck ||
-              function () {
-                return /Android|iPhone|iPad|iPod|BlackBerry/i.test(
-                  navigator.userAgent || navigator.vendor || e.opera
-                );
-              }
-            )()))
+              (Xt = false !== t.smoothScrolling),
+              (jt = t.smoothScrollingDuration || E),
+              (Kt = { targetTop: Ot.getScrollTop() }),
+              (Jt = (
+                t.mobileCheck ||
+                function () {
+                  return /Android|iPhone|iPad|iPod|BlackBerry/i.test(
+                    navigator.userAgent || navigator.vendor || e.opera
+                  );
+                }
+              )()))
           ) {
             if ((Ft = i.getElementById(t.skrollrBody || I))) mt();
             ot(), Tt(c, [x, T], [_]);
@@ -6190,14 +6197,14 @@
           );
         }
         var a = {
-            get: function () {
-              return Ot;
-            },
-            init: function (t) {
-              return Ot || new o(t);
-            },
-            VERSION: "0.6.30",
+          get: function () {
+            return Ot;
           },
+          init: function (t) {
+            return Ot || new o(t);
+          },
+          VERSION: "0.6.30",
+        },
           s = Object.prototype.hasOwnProperty,
           l = e.Math,
           u = e.getComputedStyle,
@@ -6261,8 +6268,8 @@
           },
           J = function () {
             var t =
-                e.requestAnimationFrame ||
-                e[K.toLowerCase() + "RequestAnimationFrame"],
+              e.requestAnimationFrame ||
+              e[K.toLowerCase() + "RequestAnimationFrame"],
               i = kt();
             if (Jt || !t)
               t = function (t) {
@@ -6463,8 +6470,8 @@
             for (var e = 0, i = Dt.length; e < i; e++) pt(Dt[e].element);
             if (
               ((c.style.overflow = f.style.overflow = ""),
-              (c.style.height = f.style.height = ""),
-              Ft)
+                (c.style.height = f.style.height = ""),
+                Ft)
             )
               a.setStyle(Ft, "transform", "none");
             (Ot = n),
@@ -6492,82 +6499,82 @@
               (ee = n);
           });
         var ot = function () {
-            var t, o, a, s, u, g, y, w, b, x, _, C;
-            vt(c, [h, p, m, v].join(" "), function (e) {
-              var c = e.changedTouches[0];
-              for (s = e.target; 3 === s.nodeType; ) s = s.parentNode;
-              if (
-                ((u = c.clientY),
+          var t, o, a, s, u, g, y, w, b, x, _, C;
+          vt(c, [h, p, m, v].join(" "), function (e) {
+            var c = e.changedTouches[0];
+            for (s = e.target; 3 === s.nodeType;) s = s.parentNode;
+            if (
+              ((u = c.clientY),
                 (g = c.clientX),
                 (x = e.timeStamp),
                 !P.test(s.tagName))
-              )
-                e.preventDefault();
-              switch (e.type) {
-                case h:
-                  if (t) t.blur();
-                  Ot.stopAnimateTo(), (t = s), (o = y = u), (a = g), (b = x);
-                  break;
-                case p:
-                  if (P.test(s.tagName) && i.activeElement !== s)
-                    e.preventDefault();
-                  (w = u - y),
-                    (C = x - _),
-                    Ot.setScrollTop(te - w, true),
-                    (y = u),
-                    (_ = x);
-                  break;
-                default:
-                case m:
-                case v:
-                  var f = o - u,
-                    T = a - g,
-                    S;
-                  if (T * T + f * f < 49) {
-                    if (!P.test(t.tagName)) {
-                      t.focus();
-                      var A = i.createEvent("MouseEvents");
-                      A.initMouseEvent(
-                        "click",
-                        true,
-                        true,
-                        e.view,
-                        1,
-                        c.screenX,
-                        c.screenY,
-                        c.clientX,
-                        c.clientY,
-                        e.ctrlKey,
-                        e.altKey,
-                        e.shiftKey,
-                        e.metaKey,
-                        0,
-                        null
-                      ),
-                        t.dispatchEvent(A);
-                    }
-                    return;
+            )
+              e.preventDefault();
+            switch (e.type) {
+              case h:
+                if (t) t.blur();
+                Ot.stopAnimateTo(), (t = s), (o = y = u), (a = g), (b = x);
+                break;
+              case p:
+                if (P.test(s.tagName) && i.activeElement !== s)
+                  e.preventDefault();
+                (w = u - y),
+                  (C = x - _),
+                  Ot.setScrollTop(te - w, true),
+                  (y = u),
+                  (_ = x);
+                break;
+              default:
+              case m:
+              case v:
+                var f = o - u,
+                  T = a - g,
+                  S;
+                if (T * T + f * f < 49) {
+                  if (!P.test(t.tagName)) {
+                    t.focus();
+                    var A = i.createEvent("MouseEvents");
+                    A.initMouseEvent(
+                      "click",
+                      true,
+                      true,
+                      e.view,
+                      1,
+                      c.screenX,
+                      c.screenY,
+                      c.clientX,
+                      c.clientY,
+                      e.ctrlKey,
+                      e.altKey,
+                      e.shiftKey,
+                      e.metaKey,
+                      0,
+                      null
+                    ),
+                      t.dispatchEvent(A);
                   }
-                  t = n;
-                  var k = w / C;
-                  k = l.max(l.min(k, 3), -3);
-                  var I = l.abs(k / $t),
-                    E = k * I + 0.5 * $t * I * I,
-                    L = Ot.getScrollTop() - E,
-                    O = 0;
-                  if (L > Pt) (O = (Pt - L) / E), (L = Pt);
-                  else if (L < 0) (O = -L / E), (L = 0);
-                  (I *= 1 - O),
-                    Ot.animateTo((L + 0.5) | 0, {
-                      easing: "outCubic",
-                      duration: I,
-                    });
-                  break;
-              }
-            }),
-              e.scrollTo(0, 0),
-              (c.style.overflow = f.style.overflow = "hidden");
-          },
+                  return;
+                }
+                t = n;
+                var k = w / C;
+                k = l.max(l.min(k, 3), -3);
+                var I = l.abs(k / $t),
+                  E = k * I + 0.5 * $t * I * I,
+                  L = Ot.getScrollTop() - E,
+                  O = 0;
+                if (L > Pt) (O = (Pt - L) / E), (L = Pt);
+                else if (L < 0) (O = -L / E), (L = 0);
+                (I *= 1 - O),
+                  Ot.animateTo((L + 0.5) | 0, {
+                    easing: "outCubic",
+                    duration: I,
+                  });
+                break;
+            }
+          }),
+            e.scrollTo(0, 0),
+            (c.style.overflow = f.style.overflow = "hidden");
+        },
           rt = function () {
             var t = c.clientHeight,
               e = xt(),
@@ -6585,17 +6592,17 @@
             for (h = 0, p = Dt.length; h < p; h++)
               for (
                 n = (i = Dt[h]).element,
-                  o = i.anchorTarget,
-                  s = 0,
-                  u = (a = i.keyFrames).length;
+                o = i.anchorTarget,
+                s = 0,
+                u = (a = i.keyFrames).length;
                 s < u;
                 s++
               ) {
                 if (
                   ((m = (f = a[s]).offset),
-                  (v = e[f.constant] || 0),
-                  (f.frame = m),
-                  f.isPercentage)
+                    (v = e[f.constant] || 0),
+                    (f.frame = m),
+                    f.isPercentage)
                 )
                   (m *= t), (f.frame = m);
                 if ("relative" === f.mode)
@@ -6663,9 +6670,9 @@
                       var E = (u - k.frame) / (I.frame - k.frame);
                       if (
                         ((E = k.props[T].easing(E)),
-                        (S = dt(k.props[T].value, I.props[T].value, E)),
-                        (S = ht(S)),
-                        0 === T.indexOf("@"))
+                          (S = dt(k.props[T].value, I.props[T].value, E)),
+                          (S = ht(S)),
+                          0 === T.indexOf("@"))
                       )
                         l.setAttribute(T.substr(1), S);
                       else a.setStyle(l, T, S);
@@ -6709,11 +6716,11 @@
             if (Yt || qt !== t) {
               Yt = false;
               var l = {
-                  curTop: t,
-                  lastTop: qt,
-                  maxTop: Pt,
-                  direction: (Ht = t > qt ? "down" : t < qt ? "up" : Ht),
-                },
+                curTop: t,
+                lastTop: qt,
+                maxTop: Pt,
+                direction: (Ht = t > qt ? "down" : t < qt ? "up" : Ht),
+              },
                 u;
               if (false !== (Mt.beforerender && Mt.beforerender.call(Ot, l))) {
                 if ((at(t, Ot.getScrollTop()), Jt && Ft))
@@ -6748,12 +6755,12 @@
             var e = [];
             if (
               ((X.lastIndex = 0),
-              (t = t.replace(X, function (t) {
-                return t.replace(W, function (t) {
-                  return (t / 255) * 100 + "%";
-                });
-              })),
-              Y)
+                (t = t.replace(X, function (t) {
+                  return t.replace(W, function (t) {
+                    return (t / 255) * 100 + "%";
+                  });
+                })),
+                Y)
             )
               (j.lastIndex = 0),
                 (t = t.replace(j, function (t) {
@@ -6830,30 +6837,30 @@
             try {
               if (K) style[K + t.slice(0, 1).toUpperCase() + t.slice(1)] = e;
               style[t] = e;
-            } catch (t) {}
+            } catch (t) { }
         };
         var vt = (a.addEvent = function (t, names, i) {
-            for (
-              var n = function (t) {
-                  if (!(t = t || e.event).target) t.target = t.srcElement;
-                  if (!t.preventDefault)
-                    t.preventDefault = function () {
-                      (t.returnValue = false), (t.defaultPrevented = true);
-                    };
-                  return i.call(this, t);
-                },
-                o,
-                a = 0,
-                s = (names = names.split(" ")).length;
-              a < s;
-              a++
-            ) {
-              if (((o = names[a]), t.addEventListener))
-                t.addEventListener(o, i, false);
-              else t.attachEvent("on" + o, n);
-              ie.push({ element: t, name: o, listener: i });
-            }
-          }),
+          for (
+            var n = function (t) {
+              if (!(t = t || e.event).target) t.target = t.srcElement;
+              if (!t.preventDefault)
+                t.preventDefault = function () {
+                  (t.returnValue = false), (t.defaultPrevented = true);
+                };
+              return i.call(this, t);
+            },
+            o,
+            a = 0,
+            s = (names = names.split(" ")).length;
+            a < s;
+            a++
+          ) {
+            if (((o = names[a]), t.addEventListener))
+              t.addEventListener(o, i, false);
+            else t.attachEvent("on" + o, n);
+            ie.push({ element: t, name: o, listener: i });
+          }
+        }),
           gt = (a.removeEvent = function (t, names, e) {
             for (var i = 0, n = (names = names.split(" ")).length; i < n; i++)
               if (t.removeEventListener)
@@ -7053,21 +7060,21 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             throw new Error("No handler option passed to Waypoint constructor");
           if (
             ((this.key = "waypoint-" + e),
-            (this.options = t.Adapter.extend({}, t.defaults, n)),
-            (this.element = this.options.element),
-            (this.adapter = new t.Adapter(this.element)),
-            (this.callback = n.handler),
-            (this.axis = this.options.horizontal ? "horizontal" : "vertical"),
-            (this.enabled = this.options.enabled),
-            (this.triggerPoint = null),
-            (this.group = t.Group.findOrCreate({
-              name: this.options.group,
-              axis: this.axis,
-            })),
-            (this.context = t.Context.findOrCreateByElement(
-              this.options.context
-            )),
-            t.offsetAliases[this.options.offset])
+              (this.options = t.Adapter.extend({}, t.defaults, n)),
+              (this.element = this.options.element),
+              (this.adapter = new t.Adapter(this.element)),
+              (this.callback = n.handler),
+              (this.axis = this.options.horizontal ? "horizontal" : "vertical"),
+              (this.enabled = this.options.enabled),
+              (this.triggerPoint = null),
+              (this.group = t.Group.findOrCreate({
+                name: this.options.group,
+                axis: this.axis,
+              })),
+              (this.context = t.Context.findOrCreateByElement(
+                this.options.context
+              )),
+              t.offsetAliases[this.options.offset])
           )
             this.options.offset = t.offsetAliases[this.options.offset];
           this.group.add(this),
@@ -7151,20 +7158,20 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           function e(t) {
             if (
               ((this.element = t),
-              (this.Adapter = o.Adapter),
-              (this.adapter = new this.Adapter(t)),
-              (this.key = "waypoint-context-" + i),
-              (this.didScroll = false),
-              (this.didResize = false),
-              (this.oldScroll = {
-                x: this.adapter.scrollLeft(),
-                y: this.adapter.scrollTop(),
-              }),
-              (this.waypoints = { vertical: {}, horizontal: {} }),
-              (t.waypointContextKey = this.key),
-              (n[t.waypointContextKey] = this),
-              (i += 1),
-              !o.windowContext)
+                (this.Adapter = o.Adapter),
+                (this.adapter = new this.Adapter(t)),
+                (this.key = "waypoint-context-" + i),
+                (this.didScroll = false),
+                (this.didResize = false),
+                (this.oldScroll = {
+                  x: this.adapter.scrollLeft(),
+                  y: this.adapter.scrollTop(),
+                }),
+                (this.waypoints = { vertical: {}, horizontal: {} }),
+                (t.waypointContextKey = this.key),
+                (n[t.waypointContextKey] = this),
+                (i += 1),
+                !o.windowContext)
             )
               (o.windowContext = true), (o.windowContext = new e(window));
             this.createThrottledScrollHandler(),
@@ -7270,26 +7277,26 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                 i = {},
                 n;
               for (var a in (this.handleScroll(),
-              (n = {
-                horizontal: {
-                  contextOffset: t ? 0 : e.left,
-                  contextScroll: t ? 0 : this.oldScroll.x,
-                  contextDimension: this.innerWidth(),
-                  oldScroll: this.oldScroll.x,
-                  forward: "right",
-                  backward: "left",
-                  offsetProp: "left",
-                },
-                vertical: {
-                  contextOffset: t ? 0 : e.top,
-                  contextScroll: t ? 0 : this.oldScroll.y,
-                  contextDimension: this.innerHeight(),
-                  oldScroll: this.oldScroll.y,
-                  forward: "down",
-                  backward: "up",
-                  offsetProp: "top",
-                },
-              }))) {
+                (n = {
+                  horizontal: {
+                    contextOffset: t ? 0 : e.left,
+                    contextScroll: t ? 0 : this.oldScroll.x,
+                    contextDimension: this.innerWidth(),
+                    oldScroll: this.oldScroll.x,
+                    forward: "right",
+                    backward: "left",
+                    offsetProp: "left",
+                  },
+                  vertical: {
+                    contextOffset: t ? 0 : e.top,
+                    contextScroll: t ? 0 : this.oldScroll.y,
+                    contextDimension: this.innerHeight(),
+                    oldScroll: this.oldScroll.y,
+                    forward: "down",
+                    backward: "up",
+                    offsetProp: "top",
+                  },
+                }))) {
                 var s = n[a];
                 for (var l in this.waypoints[a]) {
                   var u = this.waypoints[a][l],
@@ -7312,11 +7319,11 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                       c = Math.ceil((s.contextDimension * c) / 100);
                   if (
                     ((m = s.contextScroll - s.contextOffset),
-                    (u.triggerPoint = Math.floor(h + m - c)),
-                    (v = f < s.oldScroll),
-                    (g = u.triggerPoint >= s.oldScroll),
-                    (w = !v && !g),
-                    !p && (y = v && g))
+                      (u.triggerPoint = Math.floor(h + m - c)),
+                      (v = f < s.oldScroll),
+                      (g = u.triggerPoint >= s.oldScroll),
+                      (w = !v && !g),
+                      !p && (y = v && g))
                   )
                     u.queueTrigger(s.backward), (i[u.group.id] = u.group);
                   else if (!p && w)
@@ -7526,8 +7533,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               }
               for (
                 var t = Array.prototype.slice.call(arguments),
-                  e = 1,
-                  i = t.length;
+                e = 1,
+                i = t.length;
                 e < i;
                 e++
               )
@@ -7909,11 +7916,11 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       (Animation.prototype._onDOMContentLoaded = function () {
         if (
           ((this.status = "DOMContentLoaded"),
-          document.removeEventListener(
-            "DOMContentLoaded",
-            this._onDOMContentLoaded
-          ),
-          !this.animationElements)
+            document.removeEventListener(
+              "DOMContentLoaded",
+              this._onDOMContentLoaded
+            ),
+            !this.animationElements)
         ) {
           (this.animationElements = []), c.setHint(p);
           var sections = $("section, header, footer"),
@@ -7924,7 +7931,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                 if ((this.visitSection(t), !--length)) c.setHint(null);
               }.bind(this)
             ),
-            "interactive" !== document.readyState)
+              "interactive" !== document.readyState)
           )
             return this._onLoadingComplete(), void 0;
           window.addEventListener("load", this._onLoadingComplete);
@@ -7944,7 +7951,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     function n(animation) {
       if (
         (animation.start(),
-        !animation.isInOutAnimation() && !animation.info.infinite)
+          !animation.isInOutAnimation() && !animation.info.infinite)
       ) {
         var t = animation.info.duration,
           e = animation.info.delay;
@@ -7995,8 +8002,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     (n.prototype.init = function init() {
       if (
         ($(this.carousel).on("u-slide.bs.u-carousel", this._handleSlide),
-        $(this.carousel).on("slid.bs.u-carousel", this._handleSlid),
-        this.slide.is(".u-active"))
+          $(this.carousel).on("slid.bs.u-carousel", this._handleSlid),
+          this.slide.is(".u-active"))
       ) {
         if (this._isAutoplayOnStart()) this.pauseAutoplayWhileInAnimation();
         this.startInAnimation();
@@ -8172,7 +8179,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   },
   7975: function (t, e, i) {
     "use strict";
-    function n() {}
+    function n() { }
     var o = i(7);
     (n.prototype.scroll = function (t) {
       var e = o(".u-sticky")
@@ -8227,7 +8234,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       } catch (e) {
         t = false;
       }
-      var e = window[c] || function () {};
+      var e = window[c] || function () { };
       if (!t) {
         var i = n("." + s);
         i.addClass("show"),
@@ -8259,7 +8266,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       if (true)
         !(
           void 0 !==
-            (o = "function" == typeof (n = factory) ? n.call(e, i, e, t) : n) &&
+          (o = "function" == typeof (n = factory) ? n.call(e, i, e, t) : n) &&
           (t.exports = o)
         ),
           (a = true);
@@ -8283,7 +8290,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         return t.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent);
       }
       function init(i) {
-        function n() {}
+        function n() { }
         function o(e, o, a) {
           if ("undefined" != typeof document) {
             if (
@@ -8294,13 +8301,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             try {
               var s = JSON.stringify(o);
               if (/^[\{\[]/.test(s)) o = s;
-            } catch (t) {}
+            } catch (t) { }
             (o = i.write
               ? i.write(o, e)
               : encodeURIComponent(String(o)).replace(
-                  /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
-                  decodeURIComponent
-                )),
+                /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
+                decodeURIComponent
+              )),
               (e = encodeURIComponent(String(e))
                 .replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent)
                 .replace(/[\(\)]/g, escape));
@@ -8316,8 +8323,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           if ("undefined" != typeof document) {
             for (
               var o = {},
-                a = document.cookie ? document.cookie.split("; ") : [],
-                s = 0;
+              a = document.cookie ? document.cookie.split("; ") : [],
+              s = 0;
               s < a.length;
               s++
             ) {
@@ -8329,9 +8336,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                 if (((u = (i.read || i)(u, c) || e(u)), n))
                   try {
                     u = JSON.parse(u);
-                  } catch (t) {}
+                  } catch (t) { }
                 if (((o[c] = u), t === c)) break;
-              } catch (t) {}
+              } catch (t) { }
             }
             return t ? o[t] : o;
           }
@@ -8352,7 +8359,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           n
         );
       }
-      return init(function () {});
+      return init(function () { });
     });
   },
   7978: function (t, e, i) {
@@ -8427,9 +8434,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         if (true)
           !(
             void 0 !==
-              (o = function () {
-                return factory(i);
-              }.apply(e, (n = []))) && (t.exports = o)
+            (o = function () {
+              return factory(i);
+            }.apply(e, (n = []))) && (t.exports = o)
           );
         else if ("object" == typeof e) t.exports = factory(i);
         else i.Gumshoe = factory(i);
@@ -8437,14 +8444,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         void 0 !== i ? i : "undefined" != typeof window ? window : this,
         function (t) {
           var e = {
-              navClass: "active",
-              contentClass: "active",
-              nested: false,
-              nestedClass: "active",
-              offset: 0,
-              reflow: false,
-              events: true,
-            },
+            navClass: "active",
+            contentClass: "active",
+            nested: false,
+            nestedClass: "active",
+            offset: 0,
+            reflow: false,
+            events: true,
+          },
             i = function () {
               var t = {};
               return (
@@ -8467,7 +8474,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             o = function (t) {
               var e = 0;
               if (t.offsetParent)
-                for (; t; ) (e += t.offsetTop), (t = t.offsetParent);
+                for (; t;) (e += t.offsetTop), (t = t.offsetParent);
               return e >= 0 ? e : 0;
             },
             a = function (t) {
@@ -8586,9 +8593,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                 } else if (u) m(u, settings), (u = null);
               });
             var f = function () {
-                if (c) t.cancelAnimationFrame(c);
-                c = t.requestAnimationFrame(o.detect);
-              },
+              if (c) t.cancelAnimationFrame(c);
+              c = t.requestAnimationFrame(o.detect);
+            },
               p = function () {
                 if (c) t.cancelAnimationFrame(c);
                 c = t.requestAnimationFrame(function () {
@@ -8612,10 +8619,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               (function () {
                 if (
                   ((settings = i(e, n || {})),
-                  o.setup(),
-                  o.detect(),
-                  t.addEventListener("scroll", f, false),
-                  settings.reflow)
+                    o.setup(),
+                    o.detect(),
+                    t.addEventListener("scroll", f, false),
+                    settings.reflow)
                 )
                   t.addEventListener("resize", p, false);
               })(),
@@ -8695,10 +8702,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     (t.exports = n),
       (n.prototype.init = function () {
         var t = this.galleryZoomSelector
-            .map(function (selector) {
-              return selector + " .u-back-slide";
-            })
-            .join(", "),
+          .map(function (selector) {
+            return selector + " .u-back-slide";
+          })
+          .join(", "),
           e = this.galleryZoomSelector
             .map(function (selector) {
               return selector + " .u-back-image";
@@ -8799,9 +8806,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           for (t in ((a = e.lazySizesConfig || e.lazysizesConfig || {}), i))
             if (!(t in a)) a[t] = i[t];
         })(),
-        !i || !i.getElementsByClassName)
+          !i || !i.getElementsByClassName)
       )
-        return { init: function () {}, cfg: a, noSupport: true };
+        return { init: function () { }, cfg: a, noSupport: true };
       var s = i.documentElement,
         l = e.HTMLPictureElement,
         u = "addEventListener",
@@ -8867,19 +8874,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         },
         I =
           ((F = []),
-          (M = O = []),
-          (P = function (t, e) {
-            if (E && !e) t.apply(this, arguments);
-            else if ((M.push(t), !L)) (L = true), (i.hidden ? h : p)(z);
-          }),
-          (P._lsFlush = z =
-            function () {
-              var t = M;
-              for (M = O.length ? F : O, E = true, L = false; t.length; )
-                t.shift()();
-              E = false;
+            (M = O = []),
+            (P = function (t, e) {
+              if (E && !e) t.apply(this, arguments);
+              else if ((M.push(t), !L)) (L = true), (i.hidden ? h : p)(z);
             }),
-          P),
+            (P._lsFlush = z =
+              function () {
+                var t = M;
+                for (M = O.length ? F : O, E = true, L = false; t.length;)
+                  t.shift()();
+                E = false;
+              }),
+            P),
         E,
         L,
         O,
@@ -8890,15 +8897,15 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         N = function (t, simple) {
           return simple
             ? function () {
-                I(t);
-              }
+              I(t);
+            }
             : function () {
-                var e = this,
-                  i = arguments;
-                I(function () {
-                  t.apply(e, i);
-                });
-              };
+              var e = this,
+                i = arguments;
+              I(function () {
+                t.apply(e, i);
+              });
+            };
         },
         $ = function (t) {
           var e,
@@ -8911,12 +8918,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             u =
               m && s > 49
                 ? function () {
-                    if ((m(l, { timeout: s }), s !== a.ricTimeout))
-                      s = a.ricTimeout;
-                  }
+                  if ((m(l, { timeout: s }), s !== a.ricTimeout))
+                    s = a.ricTimeout;
+                }
                 : N(function () {
-                    h(l);
-                  }, true);
+                  h(l);
+                }, true);
           return function (t) {
             var a;
             if ((t = true === t)) s = 33;
@@ -8945,240 +8952,240 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         },
         loader =
           ((nt = /^img$/i),
-          (ot = /^iframe$/i),
-          (rt = "onscroll" in e && !/(gle|ing)bot/.test(navigator.userAgent)),
-          (at = 0),
-          (st = 0),
-          (lt = 0),
-          (ut = -1),
-          (ct = function (t) {
-            if ((lt--, !t || lt < 0 || !t.target)) lt = 0;
-          }),
-          (ft = function (t) {
-            if (null == tt) tt = "hidden" == A(i.body, "visibility");
-            return (
-              tt ||
-              !(
-                "hidden" == A(t.parentNode, "visibility") &&
-                "hidden" == A(t, "visibility")
-              )
-            );
-          }),
-          (dt = function (t, e) {
-            var n,
-              o = t,
-              visible = ft(t);
-            for (
-              K -= e, J += e, Y -= e, G += e;
-              visible && (o = o.offsetParent) && o != i.body && o != s;
+            (ot = /^iframe$/i),
+            (rt = "onscroll" in e && !/(gle|ing)bot/.test(navigator.userAgent)),
+            (at = 0),
+            (st = 0),
+            (lt = 0),
+            (ut = -1),
+            (ct = function (t) {
+              if ((lt--, !t || lt < 0 || !t.target)) lt = 0;
+            }),
+            (ft = function (t) {
+              if (null == tt) tt = "hidden" == A(i.body, "visibility");
+              return (
+                tt ||
+                !(
+                  "hidden" == A(t.parentNode, "visibility") &&
+                  "hidden" == A(t, "visibility")
+                )
+              );
+            }),
+            (dt = function (t, e) {
+              var n,
+                o = t,
+                visible = ft(t);
+              for (
+                K -= e, J += e, Y -= e, G += e;
+                visible && (o = o.offsetParent) && o != i.body && o != s;
 
-            )
-              if (
-                (visible = (A(o, "opacity") || 1) > 0) &&
-                "visible" != A(o, "overflow")
               )
-                (n = o.getBoundingClientRect()),
-                  (visible =
-                    G > n.left &&
-                    Y < n.right &&
-                    J > n.top - 1 &&
-                    K < n.bottom + 1);
-            return visible;
-          }),
-          (pt = $(
-            (ht = function () {
-              var t,
-                e,
-                rect,
-                n,
-                l,
-                u,
-                f,
-                h,
-                p,
-                m,
-                v,
-                g,
-                y = o.elements;
-              if ((W = a.loadMode) && lt < 8 && (t = y.length)) {
-                for (e = 0, ut++; e < t; e++)
-                  if (y[e] && !y[e]._lazyRace)
-                    if (
-                      !(!rt || (o.prematureUnveil && o.prematureUnveil(y[e])))
-                    ) {
-                      if (!(h = y[e][c]("data-expand")) || !(u = 1 * h)) u = st;
-                      if (!m)
-                        if (
-                          ((m =
-                            !a.expand || a.expand < 1
-                              ? s.clientHeight > 500 && s.clientWidth > 500
-                                ? 500
-                                : 370
-                              : a.expand),
-                          (o._defEx = m),
-                          (v = m * a.expFactor),
-                          (g = a.hFac),
-                          (tt = null),
-                          st < v && lt < 1 && ut > 2 && W > 2 && !i.hidden)
-                        )
-                          (st = v), (ut = 0);
-                        else if (W > 1 && ut > 1 && lt < 6) st = m;
-                        else st = at;
-                      if (p !== u)
-                        (X = innerWidth + u * g),
-                          (j = innerHeight + u),
-                          (f = -1 * u),
-                          (p = u);
+                if (
+                  (visible = (A(o, "opacity") || 1) > 0) &&
+                  "visible" != A(o, "overflow")
+                )
+                  (n = o.getBoundingClientRect()),
+                    (visible =
+                      G > n.left &&
+                      Y < n.right &&
+                      J > n.top - 1 &&
+                      K < n.bottom + 1);
+              return visible;
+            }),
+            (pt = $(
+              (ht = function () {
+                var t,
+                  e,
+                  rect,
+                  n,
+                  l,
+                  u,
+                  f,
+                  h,
+                  p,
+                  m,
+                  v,
+                  g,
+                  y = o.elements;
+                if ((W = a.loadMode) && lt < 8 && (t = y.length)) {
+                  for (e = 0, ut++; e < t; e++)
+                    if (y[e] && !y[e]._lazyRace)
                       if (
-                        ((rect = y[e].getBoundingClientRect()),
-                        (J = rect.bottom) >= f &&
-                          (K = rect.top) <= j &&
-                          (G = rect.right) >= f * g &&
-                          (Y = rect.left) <= X &&
-                          (J || G || Y || K) &&
-                          (a.loadHidden || ft(y[e])) &&
-                          ((U && lt < 3 && !h && (W < 3 || ut < 4)) ||
-                            dt(y[e], u)))
+                        !(!rt || (o.prematureUnveil && o.prematureUnveil(y[e])))
                       ) {
-                        if ((xt(y[e]), (l = true), lt > 9)) break;
-                      } else if (
-                        !l &&
-                        U &&
-                        !n &&
-                        lt < 4 &&
-                        ut < 4 &&
-                        W > 2 &&
-                        (B[0] || a.preloadAfterLoad) &&
-                        (B[0] ||
-                          (!h &&
-                            (J ||
-                              G ||
-                              Y ||
-                              K ||
-                              "auto" != y[e][c](a.sizesAttr))))
-                      )
-                        n = B[0] || y[e];
-                    } else xt(y[e]);
-                if (n && !l) xt(n);
-              }
-            })
-          )),
-          (vt = N(
-            (mt = function (t) {
-              var e = t.target;
-              if (e._lazyCache) return delete e._lazyCache, void 0;
-              ct(t),
-                x(e, a.loadedClass),
-                _(e, a.loadingClass),
-                C(e, gt),
-                T(e, "lazyloaded");
-            })
-          )),
-          (gt = function (t) {
-            vt({ target: t.target });
-          }),
-          (yt = function (t, e) {
-            try {
-              t.contentWindow.location.replace(e);
-            } catch (i) {
-              t.src = e;
-            }
-          }),
-          (wt = function (t) {
-            var e,
-              i = t[c](a.srcsetAttr);
-            if ((e = a.customMedia[t[c]("data-media") || t[c]("media")]))
-              t.setAttribute("media", e);
-            if (i) t.setAttribute("srcset", i);
-          }),
-          (bt = N(function (t, e, i, n, o) {
-            var s, l, u, f, p, m;
-            if (!(p = T(t, "lazybeforeunveil", e)).defaultPrevented) {
-              if (n)
-                if (i) x(t, a.autosizesClass);
-                else t.setAttribute("sizes", n);
-              if (((l = t[c](a.srcsetAttr)), (s = t[c](a.srcAttr)), o))
-                f = (u = t.parentNode) && v.test(u.nodeName || "");
-              if (
-                ((m = e.firesLoad || ("src" in t && (l || s || f))),
-                (p = { target: t }),
-                x(t, a.loadingClass),
-                m)
-              )
-                clearTimeout(V), (V = h(ct, 2500)), C(t, gt, true);
-              if (f) w.call(u.getElementsByTagName("source"), wt);
-              if (l) t.setAttribute("srcset", l);
-              else if (s && !f)
-                if (ot.test(t.nodeName)) yt(t, s);
-                else t.src = s;
-              if (o && (l || f)) S(t, { src: s });
-            }
-            if (t._lazyRace) delete t._lazyRace;
-            _(t, a.lazyClass),
-              I(function () {
-                var e = t.complete && t.naturalWidth > 1;
-                if (!m || e) {
-                  if (e) x(t, "ls-is-cached");
-                  mt(p),
-                    (t._lazyCache = true),
-                    h(function () {
-                      if ("_lazyCache" in t) delete t._lazyCache;
-                    }, 9);
+                        if (!(h = y[e][c]("data-expand")) || !(u = 1 * h)) u = st;
+                        if (!m)
+                          if (
+                            ((m =
+                              !a.expand || a.expand < 1
+                                ? s.clientHeight > 500 && s.clientWidth > 500
+                                  ? 500
+                                  : 370
+                                : a.expand),
+                              (o._defEx = m),
+                              (v = m * a.expFactor),
+                              (g = a.hFac),
+                              (tt = null),
+                              st < v && lt < 1 && ut > 2 && W > 2 && !i.hidden)
+                          )
+                            (st = v), (ut = 0);
+                          else if (W > 1 && ut > 1 && lt < 6) st = m;
+                          else st = at;
+                        if (p !== u)
+                          (X = innerWidth + u * g),
+                            (j = innerHeight + u),
+                            (f = -1 * u),
+                            (p = u);
+                        if (
+                          ((rect = y[e].getBoundingClientRect()),
+                            (J = rect.bottom) >= f &&
+                            (K = rect.top) <= j &&
+                            (G = rect.right) >= f * g &&
+                            (Y = rect.left) <= X &&
+                            (J || G || Y || K) &&
+                            (a.loadHidden || ft(y[e])) &&
+                            ((U && lt < 3 && !h && (W < 3 || ut < 4)) ||
+                              dt(y[e], u)))
+                        ) {
+                          if ((xt(y[e]), (l = true), lt > 9)) break;
+                        } else if (
+                          !l &&
+                          U &&
+                          !n &&
+                          lt < 4 &&
+                          ut < 4 &&
+                          W > 2 &&
+                          (B[0] || a.preloadAfterLoad) &&
+                          (B[0] ||
+                            (!h &&
+                              (J ||
+                                G ||
+                                Y ||
+                                K ||
+                                "auto" != y[e][c](a.sizesAttr))))
+                        )
+                          n = B[0] || y[e];
+                      } else xt(y[e]);
+                  if (n && !l) xt(n);
                 }
-                if ("lazy" == t.loading) lt--;
-              }, true);
-          })),
-          (xt = function (t) {
-            if (!t._lazyRace) {
-              var e,
-                i = nt.test(t.nodeName),
-                n = i && (t[c](a.sizesAttr) || t[c]("sizes")),
-                o = "auto" == n;
-              if (
-                (!o && U) ||
-                !i ||
-                (!t[c]("src") && !t.srcset) ||
-                t.complete ||
-                b(t, a.errorClass) ||
-                !b(t, a.lazyClass)
-              ) {
-                if (((e = T(t, "lazyunveilread").detail), o))
-                  St.updateElem(t, true, t.offsetWidth);
-                (t._lazyRace = true), lt++, bt(t, e, o, n, i);
+              })
+            )),
+            (vt = N(
+              (mt = function (t) {
+                var e = t.target;
+                if (e._lazyCache) return delete e._lazyCache, void 0;
+                ct(t),
+                  x(e, a.loadedClass),
+                  _(e, a.loadingClass),
+                  C(e, gt),
+                  T(e, "lazyloaded");
+              })
+            )),
+            (gt = function (t) {
+              vt({ target: t.target });
+            }),
+            (yt = function (t, e) {
+              try {
+                t.contentWindow.location.replace(e);
+              } catch (i) {
+                t.src = e;
               }
-            }
-          }),
-          (_t = H(function () {
-            (a.loadMode = 3), pt();
-          })),
-          (Tt = function () {
-            if (!U) {
-              if (n.now() - Z < 999) return h(Tt, 999), void 0;
-              (U = true), (a.loadMode = 3), pt(), f("scroll", Ct, true);
-            }
-          }),
+            }),
+            (wt = function (t) {
+              var e,
+                i = t[c](a.srcsetAttr);
+              if ((e = a.customMedia[t[c]("data-media") || t[c]("media")]))
+                t.setAttribute("media", e);
+              if (i) t.setAttribute("srcset", i);
+            }),
+            (bt = N(function (t, e, i, n, o) {
+              var s, l, u, f, p, m;
+              if (!(p = T(t, "lazybeforeunveil", e)).defaultPrevented) {
+                if (n)
+                  if (i) x(t, a.autosizesClass);
+                  else t.setAttribute("sizes", n);
+                if (((l = t[c](a.srcsetAttr)), (s = t[c](a.srcAttr)), o))
+                  f = (u = t.parentNode) && v.test(u.nodeName || "");
+                if (
+                  ((m = e.firesLoad || ("src" in t && (l || s || f))),
+                    (p = { target: t }),
+                    x(t, a.loadingClass),
+                    m)
+                )
+                  clearTimeout(V), (V = h(ct, 2500)), C(t, gt, true);
+                if (f) w.call(u.getElementsByTagName("source"), wt);
+                if (l) t.setAttribute("srcset", l);
+                else if (s && !f)
+                  if (ot.test(t.nodeName)) yt(t, s);
+                  else t.src = s;
+                if (o && (l || f)) S(t, { src: s });
+              }
+              if (t._lazyRace) delete t._lazyRace;
+              _(t, a.lazyClass),
+                I(function () {
+                  var e = t.complete && t.naturalWidth > 1;
+                  if (!m || e) {
+                    if (e) x(t, "ls-is-cached");
+                    mt(p),
+                      (t._lazyCache = true),
+                      h(function () {
+                        if ("_lazyCache" in t) delete t._lazyCache;
+                      }, 9);
+                  }
+                  if ("lazy" == t.loading) lt--;
+                }, true);
+            })),
+            (xt = function (t) {
+              if (!t._lazyRace) {
+                var e,
+                  i = nt.test(t.nodeName),
+                  n = i && (t[c](a.sizesAttr) || t[c]("sizes")),
+                  o = "auto" == n;
+                if (
+                  (!o && U) ||
+                  !i ||
+                  (!t[c]("src") && !t.srcset) ||
+                  t.complete ||
+                  b(t, a.errorClass) ||
+                  !b(t, a.lazyClass)
+                ) {
+                  if (((e = T(t, "lazyunveilread").detail), o))
+                    St.updateElem(t, true, t.offsetWidth);
+                  (t._lazyRace = true), lt++, bt(t, e, o, n, i);
+                }
+              }
+            }),
+            (_t = H(function () {
+              (a.loadMode = 3), pt();
+            })),
+            (Tt = function () {
+              if (!U) {
+                if (n.now() - Z < 999) return h(Tt, 999), void 0;
+                (U = true), (a.loadMode = 3), pt(), f("scroll", Ct, true);
+              }
+            }),
           {
             _: function () {
               if (
                 ((Z = n.now()),
-                (o.elements = i.getElementsByClassName(a.lazyClass)),
-                (B = i.getElementsByClassName(
-                  a.lazyClass + " " + a.preloadClass
-                )),
-                f("scroll", pt, true),
-                f("resize", pt, true),
-                f("pageshow", function (t) {
-                  if (t.persisted) {
-                    var e = i.querySelectorAll("." + a.loadingClass);
-                    if (e.length && e.forEach)
-                      p(function () {
-                        e.forEach(function (t) {
-                          if (t.complete) xt(t);
+                  (o.elements = i.getElementsByClassName(a.lazyClass)),
+                  (B = i.getElementsByClassName(
+                    a.lazyClass + " " + a.preloadClass
+                  )),
+                  f("scroll", pt, true),
+                  f("resize", pt, true),
+                  f("pageshow", function (t) {
+                    if (t.persisted) {
+                      var e = i.querySelectorAll("." + a.loadingClass);
+                      if (e.length && e.forEach)
+                        p(function () {
+                          e.forEach(function (t) {
+                            if (t.complete) xt(t);
+                          });
                         });
-                      });
-                  }
-                }),
-                e.MutationObserver)
+                    }
+                  }),
+                  e.MutationObserver)
               )
                 new MutationObserver(pt).observe(s, {
                   childList: true,
@@ -9191,17 +9198,17 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                   setInterval(pt, 999);
               if (
                 (f("hashchange", pt, true),
-                [
-                  "focus",
-                  "mouseover",
-                  "click",
-                  "load",
-                  "transitionend",
-                  "animationend",
-                ].forEach(function (t) {
-                  i[u](t, pt, true);
-                }),
-                /d$|^c/.test(i.readyState))
+                  [
+                    "focus",
+                    "mouseover",
+                    "click",
+                    "load",
+                    "transitionend",
+                    "animationend",
+                  ].forEach(function (t) {
+                    i[u](t, pt, true);
+                  }),
+                  /d$|^c/.test(i.readyState))
               )
                 Tt();
               else f("load", Tt), i[u]("DOMContentLoaded", pt), h(Tt, 2e4);
@@ -9254,9 +9261,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             var o, a, s;
             if (
               ((t._lazysizesWidth = n),
-              (n += "px"),
-              t.setAttribute("sizes", n),
-              v.test(e.nodeName || ""))
+                (n += "px"),
+                t.setAttribute("sizes", n),
+                v.test(e.nodeName || ""))
             )
               for (
                 a = 0, s = (o = e.getElementsByTagName("source")).length;
@@ -9266,18 +9273,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                 o[a].setAttribute("sizes", n);
             if (!i.detail.dataAttr) S(t, i.detail);
           })),
-          (Lt = function (t, e, i) {
-            var n,
-              o = t.parentNode;
-            if (o)
-              if (
-                ((i = k(t, o, i)),
-                !(n = T(t, "lazybeforesizes", { width: i, dataAttr: !!e }))
-                  .defaultPrevented)
-              )
-                if ((i = n.detail.width) && i !== t._lazysizesWidth)
-                  kt(t, o, n, i);
-          }),
+            (Lt = function (t, e, i) {
+              var n,
+                o = t.parentNode;
+              if (o)
+                if (
+                  ((i = k(t, o, i)),
+                    !(n = T(t, "lazybeforesizes", { width: i, dataAttr: !!e }))
+                      .defaultPrevented)
+                )
+                  if ((i = n.detail.width) && i !== t._lazysizesWidth)
+                    kt(t, o, n, i);
+            }),
           {
             _: function () {
               (At = i.getElementsByClassName(a.autosizesClass)),
@@ -9430,5 +9437,5 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         window._npAccordionInit();
       });
   },
-  7990: function (t, e) {},
+  7990: function (t, e) { },
 });

@@ -12,6 +12,17 @@
   <link rel="stylesheet" href="Notícias.css" media="screen">
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <script src="./nodeJS/js/artigos.js"></script>
+  <script src="./nodeJS/js/artigosTotal.js">
+
+    function showArtigo(id) {
+    console.log("setItem->artigos_title = " + id);
+    sessionStorage.setItem("artigos_id", id);
+    window.location = "noticiasBody.html";
+
+}
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <meta name="generator" content="Nicepage 4.9.5, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -108,16 +119,18 @@
       </nav>
       <a class="u-login u-login-1" data-animation-name="" data-animation-duration="0" data-animation-direction=""
         href="Login.html" data-page-id="2117902974" title="Login" target="_blank">Login</a>
+        <a class="u-login u-login-1" data-animation-name="" data-animation-duration="0" data-animation-direction=""
+        href="Registo.html" data-page-id="2117902974" title="Login" target="_blank">Registar</a>
     </div>
   </header>
 
   <section class="u-clearfix u-section-1" id="sec-31b8">
-    <div class="u-clearfix u-sheet u-sheet-1">
+    <div class="u-clearfix u-sheet u-sheet-1" >
       <!--blog-->
       <!--blog_options_json-->
       <!--{"type":"Recent","source":"","tags":"","count":""}-->
       <!--/blog_options_json-->
-      <div class="u-blog u-container-style u-expanded-width u-blog-1">
+      <div class="u-blog u-container-style u-expanded-width u-blog-1" id="noticias">
         <div class="u-list-control"></div>
         <div class="u-repeater u-repeater-1">
           <!--blog_post-->
@@ -125,10 +138,9 @@
             <div class="u-container-layout u-similar-container u-container-layout-1">
               <!--blog_post_header-->
               <h2 class="u-blog-control u-custom-item u-text u-text-1">
-              <element onloadstart="getArtigos">
-                <a class="u-post-header-link"  href="blog/post-5.html">Notícia 1</a>
-              </element>
+                <a class="u-post-header-link" href="noticiasBody.html"></a>
               </h2>
+              <div class="u-blog-control u-post-content u-text u-text-2"></div>  
               <!--/blog_post_header-->
               <a class="u-post-header-link" href="blog/post-5.html">
                 <!--blog_post_image-->
@@ -137,9 +149,6 @@
                   data-image-height="533">
                 <!--/blog_post_image-->
               </a>
-              <!--blog_post_content-->
-              <div class="u-blog-control u-post-content u-text u-text-2">Texto da Notícia</div>
-              <!--/blog_post_content-->
             </div>
           </div>
           <!--/blog_post-->
@@ -148,8 +157,9 @@
             <div class="u-container-layout u-similar-container u-container-layout-2">
               <!--blog_post_header-->
               <h2 class="u-blog-control u-custom-item u-text u-text-3">
-                <a class="u-post-header-link" href="blog/post-4.html">Notícia 2</a>
+                <a class="u-post-header-link" href="blog/post-4.html"></a>
               </h2>
+              <div class="u-blog-control u-post-content u-text u-text-4"></div>
               <!--/blog_post_header-->
               <a class="u-post-header-link" href="blog/post-4.html">
                 <!--blog_post_image-->
@@ -159,7 +169,7 @@
                 <!--/blog_post_image-->
               </a>
               <!--blog_post_content-->
-              <div class="u-blog-control u-post-content u-text u-text-4">Texto da Notícia</div>
+              
               <!--/blog_post_content-->
             </div>
           </div>
@@ -169,8 +179,9 @@
             <div class="u-container-layout u-similar-container u-container-layout-3">
               <!--blog_post_header-->
               <h2 class="u-blog-control u-custom-item u-text u-text-5">
-                <a class="u-post-header-link" href="blog/post-3.html">Notícia 3</a>
+                <a class="u-post-header-link" href="blog/post-3.html"></a>
               </h2>
+              <div class="u-blog-control u-post-content u-text u-text-6"></div>
               <!--/blog_post_header-->
               <a class="u-post-header-link" href="blog/post-3.html">
                 <!--blog_post_image-->
@@ -180,7 +191,7 @@
                 <!--/blog_post_image-->
               </a>
               <!--blog_post_content-->
-              <div class="u-blog-control u-post-content u-text u-text-6">Texto da Notícia</div>
+              
               <!--/blog_post_content-->
             </div>
           </div>
@@ -252,24 +263,9 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
       <span>HTML Creator</span>
     </a>.
   </section>
-  <pre id ="artigo"></pre>
-  <script>
-      function getArtigos() {
-
-  $.ajax({
-      url: "https://vivaotejo.herokuapp.com/api/artigos",
-      type: "GET",
-      dataType: 'json',
-      success: function(result) {
-          console.log(result)
-      }
-  });
-  }
-
-  document.getElementById("artigo").innerHTML = JSON.stringify(getArtigos);
-</script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="nodeJS/js/artigos.js"></script>
+<script src="./nodeJS/js/artigos.js"></script>
 </body>
 
 </html>
