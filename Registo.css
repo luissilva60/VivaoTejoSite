@@ -266,3 +266,52 @@ h2 {
   margin-top: 20px;
   width: 100%;
 }
+
+
+div.radio-wrapper {
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bolder;
+  color: black;
+}
+
+div.radio-container {
+  background-color: black;
+  display: inline-block;
+  border: 2px solid black;
+}
+
+div.radio-container input[type=radio] {
+  opacity: 0;
+  display: none;
+  margin: 0;
+  outline: none;
+}
+
+div.radio-container input[type="radio"]:checked+label {
+  background-color: black;
+  color: white;
+  animation-name: radio-active;
+  animation-duration: 0.2s;
+}
+
+@keyframes radio-active {
+  from {
+      transform: scale(0.6, 0.6);
+  }
+  to {
+      transform: scale(1, 1);
+  }
+}
+
+div.radio-container label {
+  padding: 0.8em;
+  cursor: pointer;
+  background: none;
+  display: inline-block;
+  outline: none;
+  letter-spacing: 0.1em;
+  background-color: white;
+  color: black;
+  transition: all ease-in-out 0.1s;
+}
