@@ -23600,7 +23600,7 @@ a.pswp__share--download:hover {
 }
 
 .u-login {
-  display: table;
+  display: inline-block; 
 }
 
 .u-table-cell .u-btn,
@@ -43850,9 +43850,9 @@ blockquote {
 }
 
 .u-header .u-login-1 {
-  font-size: 1.375rem;
-  line-height: 1;
-  margin: -37px 88px 60px auto;
+  font-size: 1.3rem;
+  line-height: 0.5; 
+  margin: -30px 50px 50px auto;
 }
 
 @media (max-width: 1199px) {
@@ -43882,7 +43882,7 @@ blockquote {
   }
 
   .u-header .u-login-1 {
-    margin-top: -54px;
+    margin-top: -100px;
   }
 }
 
