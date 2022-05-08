@@ -1,4 +1,4 @@
-function initMap() {
+async function initMap() {
     //Map options
     let mapOptions = {
         center: new google.maps.LatLng('38.654077198334306', '-8.99502557883541'),
