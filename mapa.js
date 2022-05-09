@@ -97,50 +97,47 @@ async function initMap() {
     // Add a polygon
 
     const api_url='https://cors-anywhere.herokuapp.com/https://vivaotejo.herokuapp.com/api/cais'
-    async function getCais(){
-        const response=await fetch(api_url);
-        const cais=await response.json();
+            async function getCais(){
+                const response=await fetch(api_url);
+                const cais=await response.json();
 
-        for (i=0;i<cais.length;i=i+1) {
-            map.data.addGeoJson(
-                cais[i].geojson
-            );
-        }
+                for (i = 0; i < cais.length; i++) {
+                    var ParseCais = JSON.parse(cais[i].geojson)
+                    console.log(ParseCais.coordinates)
+                }
 
-        map.data.loadGeoJson(
+                var bounds = new google.maps.LatLngBounds();
+                for (var y = 0; y < cais.length; y++) {
+                    var shell = ParseCais.coordinates[y];
+                    var latLngArray = [];
+                    var length = Object.keys(shell).length;
+                    console.log(length);
+                    for (var i = 0; i < shell.length; i++) {
+                        console.log("Latitude: " + shell[i][0]);
+                        console.log("Longitude: "+ shell[i][1]);
+                        var latLng = new google.maps.LatLng(shell[i][0], shell[i][1]);
+                        bounds.extend(latLng);
+                        console.log(bounds);
+                        latLngArray.push(latLng);
+                        console.log(latLngArray)
+                    }
 
-        );
-    }
-    getCais();
+                    console.log(latLngArray);
+                    // Polygon construction.
+                    var ttPoly = new google.maps.Polygon({
+                        paths: latLngArray,
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 0.2,
+                        strokeWeight: 2,
+                        fillColor: '#FF0000',
+                        fillOpacity: 0.2
+                    });
+                    ttPoly.setMap(map);
+                }
+                map.fitBounds(bounds);
 
-
-
-
-
-
-
-    var polygoneCoords = [
-        {lat: 38.653832143997676 , lng: -8.995290023061667},
-        {lat: 38.65486960471314, lng: -8.995866832853059},
-        {lat: 38.65608655568451, lng: -8.997148928717959},
-        {lat: 38.65631695715076, lng: -8.996615169167347 },
-        {lat: 38.655696966064646, lng: -8.995987532308838},
-        {lat: 38.6546915637073 , lng: -8.995257971516041},
-        {lat: 38.65388304240809, lng: -8.994952199713179},
-        {lat: 38.653832143997676 , lng: -8.995290023061667}
-    ];
-
-
-    var myPolygon = new google.maps.Polygon({
-        paths: polygoneCoords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35
-    });
-
-    myPolygon.setMap(map);
+            }
+            getCais();
 
     //Geolocation
     //Geolocation
