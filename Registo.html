@@ -116,7 +116,7 @@
         <main>
             <div class="container">
                 <form id="form" class="form">
-                    <h2>Registo de Conta</h2>
+                    <h2>Registo de Conta</h2> <br>
                     <div class="form-control">
                         <label for="username">Nome de Utilizador</label>
                         <input type="text" id="username" placeholder="Enter Username" />
@@ -127,6 +127,26 @@
                         <input type="text" id="email" placeholder="Enter email" />
                         <small>Error Message</small>
                     </div>
+                    <!--<div class="form-control">
+                        <label for="gender">Gender</label>
+                        <input type="radio" name="gender" value="male"> Male 
+                        <input type="radio" name="gender" value="female"> Female 
+                        <small>Error Message</small>
+                    </div> -->
+                    <div class="radio-wrapper">
+                        <p>GÉNERO</p>
+                        <div class="radio-container">
+                            <input checked="checked" type="radio" name="gender" value="1" id="male" />
+                            <label for="male">MALE</label>
+                            <input type="radio" name="gender" value="0" id="female" />
+                            <label for="female">FEMALE</label>
+                        </div>
+                    </div> <br> <br>
+                    
+                    <label for="start">Data de nascimento:&nbsp;&nbsp;</label> 
+                    <input type="date" id="start" name="trip-start" value="2022-22-22" min="1900-01-01"
+                        max="2022-12-31"> <br> <br>
+
                     <div class="form-control">
                         <label for="password">Password</label>
                         <input type="password" id="password" placeholder="Enter password" />
@@ -137,7 +157,7 @@
                         <input type="password" id="password2" placeholder="Enter password again" />
                         <small>Error Message</small>
                     </div>
-                    <button>Submit</button>
+                    <button>Registar</button>
                 </form>
             </div>
         </main>

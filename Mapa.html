@@ -18,6 +18,7 @@
 
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <script src="mapa.js"></script>
   <meta name="generator" content="Nicepage 4.9.5, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -123,24 +124,40 @@
       <h1 class="u-text u-text-default u-text-1">Mapa Interativo</h1>
     </div>
   </section>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Ddevice-width, initi-scale1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./nodeJS/js/cais.js"></script>
+    <title>Document</title>
+    <style>
+        /*Container to center the map*/
+        #container{
+            height: 100vh;
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #map{
+            height: 80vh;
+            width: 80vw;
+        }
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
 
-  <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+        <h2 id="info2"></h2>
+        <h3 id="info"></h3>
+        <div id="map"></div>
 
-    <!-- 
-     The `defer` attribute causes the callback to execute after the full HTML
-     document has been parsed. For non-blocking uses, avoiding race conditions,
-     and consistent behavior across browsers, consider loading using Promises
-     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-    -->
-    
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdHayjIj-mkhE1hp_I3OKGVd65t-JRI8E&callback=initMap&v=weekly"
-      defer
-    ></script>
-
-
+    </div>
   <footer class="u-align-center u-clearfix u-footer u-grey-80" id="sec-e0ac">
     <div class="u-clearfix u-sheet u-sheet-1">
       <p class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-1"> Lorem Ipsum&nbsp;is simply dummy
@@ -189,6 +206,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
       </div>
     </div>
   </footer>
-</body>
+</body>  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXJMCul0dV0qlry9bSDTx9K9dKRLJZSY&callback=initMap"></script>
 
 </html>
