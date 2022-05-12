@@ -41,7 +41,6 @@ async function initMap() {
 
 
     }
-
     getEventos();
     //GEo Coding search bar
     /*var input =document.getElementById('searchInput');

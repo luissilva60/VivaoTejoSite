@@ -18,12 +18,12 @@
             else mainElem.innerHTML =
                 "<h1>Server problems, please try later</h1>";
         }
-         for (i = 0; i < artigo.length ;i++) {
+         for (var i = 0; i < artigo.length ;i++) {
                 console.log("[artigos] artigo = " + JSON.stringify(artigo));
                 document.getElementById("artigos_title").innerHTML = artigo[i].artigos_title;
                 document.getElementById("artigos_subtitle").innerHTML = artigo[i].artigos_subtitle;
             }
-            for (i = 0; i < artigo.length;i++) {
+            for (var i = 0; i < artigo.length;i++) {
                 html += "<section><h1>" + artigo[i].artigos_title + "</h1>" + "<h2>" + artigo[i].artigos_subtitle + "</h2></section>";
             } 
             console.log("[Artigos]" + JSON.stringify(artigostot));
