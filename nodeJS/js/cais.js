@@ -1,5 +1,4 @@
 window.onload = async function() {
-    let caisElem = document.getElementById("cais");
     let cais;
     let html;
     try {
@@ -19,7 +18,6 @@ window.onload = async function() {
             "<h1>Server problems, please try later</h1>";
     }
     console.log("[cais] cais = " + JSON.stringify(cais));
-    caisElem.innerHTML+= html;
 }
 
 /*function createCaisHTML(cais) {

@@ -13,9 +13,6 @@
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <script type="module" src="index.js"></script>
-
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
   <script src="mapa.js"></script>
@@ -132,32 +129,132 @@
     <script src="./nodeJS/js/cais.js"></script>
     <title>Document</title>
     <style>
-        /*Container to center the map*/
-        #container{
-            height: 100vh;
-            display:  flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        #map{
-            height: 80vh;
-            width: 80vw;
-        }
-        html, body{
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+      /*Container to center the map*/
+      #container{
+          height: 100vh;
+          display:  flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      }
+      #map{
+          height: 80vh;
+          width: 80vw;
+      }
+      .controls {
+           margin-top: 16px;
+           border: 1px solid transparent;
+           border-radius: 2px 0 0 2px;
+           box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           height: 32px;
+           outline: none;
+           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+
+
+      /* CSS */
+       .button{
+           background-color: #0095ff;
+           border: 1px solid transparent;
+           border-radius: 3px;
+           box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+           box-sizing: border-box;
+           color: #fff;
+           cursor: pointer;
+           display: inline-block;
+           font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+           font-size: 13px;
+           font-weight: 400;
+           line-height: 1.15385;
+           margin: 0;
+           outline: none;
+           padding: 8px .8em;
+           position: relative;
+           text-align: center;
+           text-decoration: none;
+           user-select: none;
+           -webkit-user-select: none;
+           touch-action: manipulation;
+           vertical-align: baseline;
+           white-space: nowrap;
+       }
+
+      .button:hover,
+      .button:focus {
+          background-color: #07c;
+      }
+
+      .button:focus {
+          box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+      }
+
+      .button:active {
+          background-color: #0064bd;
+          box-shadow: none;
+      }
+      .controls {
+        margin-top: 16px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      html, body{
+          margin: 0;
+          padding: 0;
+      }
+  </style>
 </head>
 <body>
-    <div id="container">
-
-        <h2 id="info2"></h2>
-        <h3 id="info"></h3>
-        <div id="map"></div>
-
-    </div>
+  <div id="container">
+      <h2 id="info2"></h2>
+      <h3 id="info"></h3>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <b>Mode of travelling</b>
+                        <select id="mode">
+                          <option value="DRIVING">DRIVING</option>
+                          <option value="WALKING">WALKING</option>
+                        </select>
+      <button onclick="calculateAndDisplayRoute()" id="btn">Try</button>
+      <button id="button" class="button" role="button">Current Location</button>
+      <div id="map"></div>
+  </div>
   <footer class="u-align-center u-clearfix u-footer u-grey-80" id="sec-e0ac">
     <div class="u-clearfix u-sheet u-sheet-1">
       <p class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-1"> Lorem Ipsum&nbsp;is simply dummy
@@ -170,7 +267,7 @@
       <div class="u-social-icons u-spacing-10 u-social-icons-1">
         <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span
             class="u-icon u-social-facebook u-social-icon u-text-white u-icon-1"><svg class="u-svg-link"
-              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-87cb"></use>
             </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-87cb">
               <path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
@@ -207,6 +304,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
     </div>
   </footer>
 </body>  
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXJMCul0dV0qlry9bSDTx9K9dKRLJZSY&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAeXJMCul0dV0qlry9bSDTx9K9dKRLJZSY&callback=initMap"></script>
 
 </html>
