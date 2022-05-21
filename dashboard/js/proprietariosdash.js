@@ -2,7 +2,7 @@ $(document).ready(
 
     function(){
         $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/https://vivaotejo.herokuapp.com/api/utilizador/no/proprietarios",
+            url: "https://cors-anywhere.herokuapp.com/https://vivaotejo.herokuapp.com/api/utilizador/proprietarios",
             type: "GET",
             dataType: 'json',
             success: function(result) {
@@ -10,7 +10,7 @@ $(document).ready(
                 $('#name').text(result)
                 var obj = JSON.stringify(result);
                 console.log(obj);
-                let tabela = document.querySelector("#tableuser")
+                let tabela = document.querySelector("#tableproprietarios")
                 let html = ""
                 let buttons = 
                 "<td><div class='btn-group'>" +
@@ -61,7 +61,6 @@ $(document).ready(
                     <th>${result[i].bdate}</th>
                     <th>${result[i].utilizador_gender}</th>
                     <th>${result[i].utilizador_email}</th>
-                    <th>${result[i].roles_name}</th>
                     ${buttons}</tr>`
                 }
 

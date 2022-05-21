@@ -1,22 +1,74 @@
-window.onload = async function() {
-    let artsElem = document.getElementById("artsElem");
-    try {
-        let artigos = await $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/https://vivaotejo.herokuapp.com/api/embarcacao",
-            method: "get",
-            dataType: "json"
-        });
-        let html = "";
-        console.log("[artsElem] artigos = " + JSON.stringify(artigos));
-        artsElem.innerHTML = html;
-    } catch (err) {
-        console.log(err);
-        artsElem.innerHTML = "<h1>Not available at this moment</h1>";
-    }
-}
+$(document).ready(
 
-function showEmbarcacao(id) {
-    console.log("setItem->embarcacao_id = " + id);
-    sessionStorage.setItem("embarcacao_id", id);
-    window.location = "noticiasBody.html";
-}
+    function(){
+        $.ajax({
+            url: "https://cors-anywhere.herokuapp.com/https://vivaotejo.herokuapp.com/api/embarcacao/pending",
+            type: "GET",
+            dataType: 'json',
+            success: function(result) {
+                console.log(result);
+                $('#name').text(result)
+                var obj = JSON.stringify(result);
+                console.log(obj);
+                let tabela = document.querySelector("#tableembpending")
+                let html = ""
+                let buttons = 
+                "<td><div class='btn-group'>" +
+                "<button type='button' class='btn btn-danger'>Action</button>" +
+                "<button type='button' class='btn btn-danger dropdown-toggle dropdown-hover dropdown-icon' data-toggle='dropdown'>" +
+                  "<span class='sr-only'>Toggle Dropdown</span>" +
+                "</button>" +
+                    "<div class='dropdown-menu' role='menu'>" +
+                        "<a class='dropdown-item' href='#'>Action</a>" +
+                        "<a class='dropdown-item' href='#'>Another action</a>" +
+                        "<a class='dropdown-item' href='#'>Something else here</a>" +
+                    "<div class='dropdown-divider></div>" +
+                    "<a class='dropdown-item' href='#'>Separated link</a>" +
+                    "</div>" +
+                "</div>" +
+                "<div class='btn-group'>" +
+                "<button type='button' class='btn btn-success'>Action</button>" +
+                "<button type='button' class='btn btn-success dropdown-toggle dropdown-hover dropdown-icon' data-toggle='dropdown'>" +
+                  "<span class='sr-only'>Toggle Dropdown</span>" +
+                "</button>" +
+                    "<div class='dropdown-menu' role='menu'>" +
+                        "<a class='dropdown-item' href='#'>Action</a>" +
+                        "<a class='dropdown-item' href='#'>Another action</a>" +
+                        "<a class='dropdown-item' href='#'>Something else here</a>" +
+                    "<div class='dropdown-divider'></div>" +
+                    "<a class='dropdown-item' href='#'>Separated link</a>" +
+                    "</div>" +
+                "</div>" +
+                "<div class='btn-group'>" +
+                "<button type='button' class='btn btn-warning'>Action</button>" +
+                "<button type='button' class='btn btn-warning dropdown-toggle dropdown-hover dropdown-icon' data-toggle='dropdown'>" +
+                  "<span class='sr-only'>Toggle Dropdown</span>" +
+                "</button>" +
+                    "<div class='dropdown-menu' role='menu'>" +
+                        "<a class='dropdown-item' href='#'>Action</a>" +
+                        "<a class='dropdown-item' href='#''>Another action</a>" +
+                        "<a class='dropdown-item' href='#'>Something else here</a>" +
+                    "<div class='dropdown-divider'></div>" +
+                    "<a class='dropdown-item' href='#'>Separated link</a>" +
+                    "</div>" +
+                "</div>" +
+                "<div class='btn-group'>" ;
+                for (let i in result)
+                {
+                    html += `<tr>
+                    <th>${result[i].utilizador_id}</th>
+                    <th>${result[i].utilizador_name}</th>
+                    <th>${result[i].bdate}</th>
+                    <th>${result[i].utilizador_gender}</th>
+                    <th>${result[i].utilizador_email}</th>
+                    <th>${result[i].roles_name}</th>
+                    ${buttons}</tr>`
+                }
+
+                tabela.innerHTML = html
+            }
+
+        });
+    }
+
+);
