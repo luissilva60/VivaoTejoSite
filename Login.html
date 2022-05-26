@@ -10,8 +10,14 @@
   <title>Login</title>
   <link rel="stylesheet" href="nicepage.css" media="screen">
   <link rel="stylesheet" href="Login.css" media="screen">
-  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+
+  <script src="vendor/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+  <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+
+  <script src="./Login.js"></script>
   <meta name="generator" content="Nicepage 4.9.5, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -107,45 +113,29 @@
     </div>
   </header> <br>
 
-  <div class="login">
-    <h1>Login Viva o Tejo</h1>
-    <form method="post" action="">
-      <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-      <p><input type="password"  name="password" value="" placeholder="Password"></p>
-      <p class="remember_me">
-        <label>
-          <input type="checkbox" name="remember_me" id="remember_me">
-          Remember me on this computer
-        </label>
-      </p>
-      <p class="submit"><input type="submit" name="commit" value="Login"></p>
-    </form>
-  </div>
 
-  <div class="login-help">
-    <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
-  </div>
 
-  <body>«
+  <body>
     <div class="login-form">
       <form>
         <h1>Login</h1>
         <div class="content">
           <div class="input-field">
-            <input type="email" name="email" placeholder="Email" autocomplete="nope" required>
+            <input type="email" id ="EmailForm"name="EmailForm" placeholder="Email" autocomplete="nope" required>
           </div>
           <div class="input-field">
-            <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+            <input type="password" id="PasswordForm"name="PasswordForm" placeholder="Password" autocomplete="new-password" required>
           </div>
           <a href="#" class="link">Esqueceu-se da password?</a>
         </div>
         <div class="action">
           <button href="Registo.html">Registo</button>
-          <button>Login</button>
+          <button id="btnLogin">Login</button>
         </div>
       </form>
     </div>
   </body>
+
 
   <footer class="u-align-center u-clearfix u-footer u-grey-80" id="sec-e0ac">
     <div class="u-clearfix u-sheet u-sheet-1">
